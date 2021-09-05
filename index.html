@@ -50,15 +50,33 @@
 	 -o-background-size: cover;
 	 background-size: cover;
 	}	
-			
-			
+	
 	.search 	{ width:600px; height:24px; text-align:center; font-size:18px; color:black; background-color:white;  border: 1px solid white; }
 	.search:hover 	{ outline:none; }	
 	#title 		{ position:center; margin-left:auto; margin-right:auto; width:624px; padding-bottom:5px; padding-top:5px; }
 	#wrapper 	{ position:center; margin-left:auto; margin-right:auto; width:100%; height:214px; }
 	#gap 		{ padding:6px; float:left; }
 	#Group 		{ width:210px; height:200px; float:left; }
-		</style>
+	
+	.container {
+    	display: flex;
+    	justify-content: center;
+    	flex-wrap: wrap;
+    	width: 70%;
+    	background: #eee;
+    	margin: 10px auto;
+    	position: relative;
+    	text-align:center;
+	}
+
+	.block {
+    	background: green;
+    	height: 100px;
+    	width: 100px;
+    	margin: 10px;
+	}
+	
+	</style>
 	</head>
 	<body>	
 		<div id="title">
@@ -252,5 +270,16 @@
 				<a href="https://sci-hub.do/">Sci-Hub</a>
 
 		</div>
+
+<div class="container">
+    <div class="block">1. name of the company</div>
+    <div class="block">2. name of the company</div>
+    <div class="block">3. name of the company</div>
+    <div class="block">4. name of the company</div>
+    <div class="block">5. name of the company</div>
+    <div class="block">6. name of the company</div>
+    <div class="block">7. name of the company</div>
+    <div class="block">8. name of the company</div>
+</div>	
 
 	</body>
