@@ -4,6 +4,37 @@
 	<title>Welcome Home</title>
 	<meta content="”width=device-width," name="”viewport”">
 	<style>
+
+        /* Style for the search bar */
+        .search-container {
+            display: flex;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the search input */
+        .search-input {
+            flex: 1;
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        /* Style for the search button */
+        .search-button {
+            background-color: #4285f4; /* Google's blue */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+		
 	   /* unvisited link */
 	   
 	   a:link {
@@ -84,11 +115,10 @@
 	</style>
 </head>
 <body>	
-	<div id="title">
-		<center>
-			<h2></h2>
-		</center>
-	</div>
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
 	<div class="container">
 		<div class="block">
 			<center>
