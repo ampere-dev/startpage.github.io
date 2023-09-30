@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome Home</title>
-	<meta content="”width=device-width," name="”viewport”">
-	<style>
-
+    <title>Welcome Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
         /* Style for the search bar */
         .search-container {
             display: flex;
@@ -34,78 +33,62 @@
             cursor: pointer;
             font-size: 16px;
         }
-		
-	   /* unvisited link */
-	   
-	   a:link {
-	       color: white;
-	       text-decoration: none;
-	       font-family: "Krona One";
-	   }
-	   /* visited link */
-	   
-	   a:visited {
-	       color: white;
-	       text-decoration: none;
-	       font-family: "Krona One";
-	   }
-	   /* mouse over link */
-	   
-	   a:hover {
-	       color: #0047ab;
-	       text-decoration: none;
-	       font-family: "Krona One";
-	       background-color: #88ace0;
-	   }
-	   
-	   nav a:hover {
-	       color: #0047ab;
-	       text-decoration: none;
-	       font-family: "Krona One";
-	   }
-	   
-	   p {
-	       color: white;
-	       text-decoration: none;
-	       font-family: "Krona One";
-	   }
-	   
-	   body {
-	       #overflow: hidden;
-	       /* Hide scrollbars */
-	       height: 100%;
-	   }
-	   
-	   html {
-	       background: url(Equinix_Data_Center.webp) no-repeat center center fixed;
-	       -webkit-background-size: cover;
-	       -moz-background-size: cover;
-	       -o-background-size: cover;
-	       background-size: cover;
-	   }
-	   
-	   .container {
-	       display: flex;
-	       justify-content: center;
-	       flex-wrap: wrap;
-	       position: relative;
-	       text-align: center;
-	       margin: 10px;
-	   }
-	   
-	   .block {
-	       height: 200px;
-	       width: 210px;
-	       margin: 10px;
-	   }
-	</style>
+
+        /* Style for links */
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: "Krona One";
+        }
+
+        /* Style for links on hover */
+        a:hover {
+            color: #0047ab;
+            background-color: #88ace0;
+        }
+
+        /* Style for the body and HTML */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Remove scrollbar */
+        body {
+            overflow: hidden;
+        }
+
+        /* Style for .search input on hover */
+        .search:hover .search-input {
+            outline: none;
+        }
+
+        /* Other styles */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .block {
+            height: 200px;
+            width: 210px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>	
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search...">
         <button class="search-button">Search</button>
     </div>
-	<div class="container">
+    <div class="container">
 		<div class="block">
 			<center>
 				<p>News</p>
