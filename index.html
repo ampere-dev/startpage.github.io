@@ -9,6 +9,7 @@
             display: flex;
             max-width: 400px;
             margin: 0 auto;
+   	    margin-top: 20px; 
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -86,7 +87,7 @@
 <body>	
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search...">
-        <button class="search-button">Search</button>
+        <button class="search-button" onclick="performSearch()">Search</button>
     </div>
     <div class="container">
 		<div class="block">
@@ -335,5 +336,19 @@
 			<a href="https://login.patientfusion.com/">Fusion</a>
 		</div>
 	</div>
+    <script>
+        // JavaScript function to perform a Google search
+        function performSearch() {
+            const searchInput = document.querySelector('.search-input');
+            const searchTerm = searchInput.value.trim();
+            
+            if (searchTerm !== '') {
+                // Construct the Google search URL with the user's input
+                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`;
+                // Open a new tab with the Google search results
+                window.open(googleSearchUrl, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
