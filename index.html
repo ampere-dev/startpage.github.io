@@ -68,10 +68,17 @@
             padding: 2px 5px;
         }
 
-        /* Remove body overflow to prevent scrolling */
-        body {
-            overflow: hidden;
-        }
+/* Disable scrolling on larger screens */
+body {
+    overflow: hidden;
+}
+
+/* Allow scrolling on narrow screens */
+@media (max-width: 768px) {
+    body {
+        overflow: auto; /* Enables scrolling */
+    }
+}
 
         /* Block styling */
         .container {
