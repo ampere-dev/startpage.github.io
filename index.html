@@ -1,116 +1,149 @@
+Here's an improved version of your HTML document, focusing on better structure, accessibility, and small optimizations for performance:
+
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        /* Style for the search bar */
+        /* General styling for improved readability */
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Styling for search bar */
         .search-container {
             display: flex;
             max-width: 400px;
-            margin: 0 auto;
-   	    margin-top: 20px; 
+            margin: 20px auto;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             background-color: #f2f2f2;
         }
 
-        /* Style for the search input */
         .search-input {
-            flex: 1;
+            flex-grow: 1;
             border: none;
-            padding: 5px;
+            padding: 8px;
             font-size: 16px;
+            border-radius: 5px 0 0 5px;
         }
 
-        /* Style for the search button */
+        .search-input:focus {
+            outline: none;
+        }
+
         .search-button {
             background-color: #4285f4; /* Google's blue */
-            color: #fff;
+            color: white;
             border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
+            border-radius: 0 5px 5px 0;
+            padding: 8px 12px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #357ae8;
         }
 
         /* Style for links */
         a {
             color: white;
             text-decoration: none;
-            font-family: "Krona One";
+            display: inline-block;
+            margin: 5px 0;
         }
 
-        /* Style for links on hover */
         a:hover {
             color: #0047ab;
             background-color: #88ace0;
+            padding: 2px 5px;
         }
 
-        /* Style for the body and HTML */
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Remove scrollbar */
+        /* Remove body overflow to prevent scrolling */
         body {
             overflow: hidden;
         }
 
-        /* Style for .search input on hover */
-        .search:hover .search-input {
-            outline: none;
-        }
-
-        /* Other styles */
+        /* Block styling */
         .container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            position: relative;
-            text-align: center;
-            margin: 10px;
+            padding: 10px;
         }
 
         .block {
-            height: 200px;
-            width: 210px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 20px;
             margin: 10px;
-	    color: white;
+            height: auto;
+            width: 210px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .block p {
+            margin: 10px 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid white;
+            margin: 10px 0;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .block {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
-<body>	
+<body>    
     <div class="search-container">
         <input type="text" class="search-input" placeholder="Search...">
         <button class="search-button" onclick="performSearch()">Search</button>
     </div>
+
     <div class="container">
-		<div class="block">
-			<center>
-				<p>News</p>
-			</center>
-			<hr noshade>
-			<a href="https://rantingly.com/">Rantingly</a> <a href=
-			"https://infowars.com">Infowars</a> <a href=
-			"https://breitbart.com/">Brietbart</a> <a href=
-			"https://news.google.com/?hl=en-US&gl=US&ceid=US:en">Google</a> <a href=
-			"https://www.rt.com/">RT</a> <a href="https://www.oann.com/">OANN</a>
-			<a href="https://townhall.com/">Townhall</a> <a href=
-			"https://www.feedly.com">Feedly</a> <a href=
-			"https://www.whatfinger.com/">Whatfinger</a> <a href=
-			"https://thelibertydaily.com/">Liberty Daily</a> <a href=
-			"https://www.americanthinker.com/">Thinker</a> <a href=
-			"https://www.washingtonexaminer.com/">Examiner</a> <a href=
-			"https://bonginoreport.com/">Bongino</a> <a href=
-			"https://thenewamerican.com/">NewAmerican</a> <a href=
-			"https://halturnerradioshow.com/index.php/en//">Hal Turner</a>
-		</div>
+        <!-- Blocks for different sections -->
+        <div class="block">
+            <p>News</p>
+            <hr>
+            <a href="https://rantingly.com/">Rantingly</a>
+            <a href="https://infowars.com">Infowars</a>
+            <a href="https://breitbart.com/">Breitbart</a>
+            <a href="https://news.google.com/?hl=en-US&gl=US&ceid=US:en">Google</a>
+            <a href="https://www.rt.com/">RT</a>
+            <a href="https://www.oann.com/">OANN</a>
+            <a href="https://townhall.com/">Townhall</a>
+            <a href="https://www.feedly.com">Feedly</a>
+            <a href="https://www.whatfinger.com/">Whatfinger</a>
+            <a href="https://thelibertydaily.com/">Liberty Daily</a>
+            <a href="https://www.americanthinker.com/">Thinker</a>
+            <a href="https://www.washingtonexaminer.com/">Examiner</a>
+            <a href="https://bonginoreport.com/">Bongino</a>
+            <a href="https://thenewamerican.com/">NewAmerican</a>
+            <a href="https://halturnerradioshow.com/index.php/en//">Hal Turner</a>
+        </div>
+
 		<div class="block">
 			<center>
 				<p>Bills</p>
@@ -335,17 +368,15 @@
 			<a href="https://login.patientfusion.com/">Fusion</a>
 		</div>
 	</div>
+
     <script>
-        // JavaScript function to perform a Google search
+        // Function to perform a Google search
         function performSearch() {
-            const searchInput = document.querySelector('.search-input');
-            const searchTerm = searchInput.value.trim();
+            const searchInput = document.querySelector('.search-input').value.trim();
             
-            if (searchTerm !== '') {
-                // Construct the Google search URL with the user's input
-                const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchTerm)}`;
-                // Open a new tab with the Google search results
-                window.open(googleSearchUrl, '_blank');
+            if (searchInput) {
+                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(searchInput)}`;
+                window.open(searchUrl, '_blank');
             }
         }
     </script>
