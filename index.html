@@ -6,6 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome Home</title>
     <style>
+	    /* Normal link style */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Highlight the text when selected */
+a:focus, a:hover {
+  background-color: lightblue; /* Blue background when hovered or selected */
+  color: inherit; /* Keep the text color the same */
+  outline: none; /* Remove the default browser outline */
+}
+
+/* Prevent text movement by disabling border or outline changes */
+a:focus {
+  outline: none;
+}
+
+/* Ensure text stays static */
+a {
+  position: relative;
+}
         /* General styling for improved readability */
         body, html {
             height: 100%;
