@@ -6,10 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome Home</title>
     <style>
-	    /* Normal link style */
+	    
+/* Normal link style */
 a {
   text-decoration: none;
-  color: inherit;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  margin: 5px 0;
+  padding: 2px 5px; /* Set a consistent padding */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
 }
 
 /* Highlight the text when selected */
@@ -48,62 +54,76 @@ a {
             margin: 5px 0;
         }
 
-        a:hover {
-            color: #0047ab;
-            background-color: #88ace0;
-            padding: 2px 5px;
-        }
+/* Highlight the text when hovered */
+a:focus, a:hover {
+  background-color: #88ace0; /* Blue background when hovered or selected */
+  color: #0047ab; /* Change text color on hover */
+  outline: none; /* Remove the default browser outline */
+}
+
+/* Prevent text movement by keeping padding consistent */
+a {
+  position: relative;
+}
+
+/* General styling for improved readability */
+body, html {
+  height: 100%;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Block styling */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.block {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  height: auto;
+  width: 210px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.block p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid white;
+  margin: 10px 0;
+}
 
 /* Disable scrolling on larger screens */
 body {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /* Allow scrolling on narrow screens */
 @media (max-width: 768px) {
-    body {
-        overflow: auto; /* Enables scrolling */
-    }
+  body {
+    overflow: auto; /* Enables scrolling */
+  }
+
+  .block {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
-
-        /* Block styling */
-        .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 10px;
-        }
-
-        .block {
-            background-color: rgba(0, 0, 0, 0.6);
-            color: white;
-            padding: 20px;
-            margin: 10px;
-            height: auto;
-            width: 210px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .block p {
-            margin: 10px 0;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid white;
-            margin: 10px 0;
-        }
-
-        /* Responsive layout */
-        @media (max-width: 768px) {
-            .block {
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
     </style>
 </head>
 <body>    
