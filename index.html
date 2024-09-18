@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Welcome Home</title>
-    <style>
-	    
+<style>
 /* Normal link style */
 a {
   text-decoration: none;
@@ -14,56 +13,16 @@ a {
   font-size: 14px;
   display: inline-block;
   margin: 5px 0;
-  padding: 2px 5px; /* Set a consistent padding */
+  padding: 2px 5px; /* Set consistent padding */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  position: relative; /* Ensure text stays static */
 }
-
-/* Highlight the text when selected */
-a:focus, a:hover {
-  background-color: lightblue; /* Blue background when hovered or selected */
-  color: inherit; /* Keep the text color the same */
-  outline: none; /* Remove the default browser outline */
-}
-
-/* Prevent text movement by disabling border or outline changes */
-a:focus {
-  outline: none;
-}
-
-/* Ensure text stays static */
-a {
-  position: relative;
-}
-        /* General styling for improved readability */
-        body, html {
-            height: 100%;
-		font-size:14px
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
-            background-size: cover;
-        }
-
-        /* Style for links */
-        a {
-            color: white;
-		font-size: 14px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 5px 0;
-        }
 
 /* Highlight the text when hovered */
 a:focus, a:hover {
   background-color: #88ace0; /* Blue background when hovered or selected */
   color: #0047ab; /* Change text color on hover */
-  outline: none; /* Remove the default browser outline */
-}
-
-/* Prevent text movement by keeping padding consistent */
-a {
-  position: relative;
+  outline: none; /* Remove default browser outline */
 }
 
 /* General styling for improved readability */
@@ -75,6 +34,7 @@ body, html {
   font-family: Arial, sans-serif;
   background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
   background-size: cover;
+  overflow: hidden; /* Disable scrolling on larger screens */
 }
 
 /* Block styling */
@@ -88,10 +48,10 @@ body, html {
 .block {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  padding: 20px;
+  padding: 15px;
   margin: 10px;
   height: auto;
-  width: 210px;
+  width: 180px; /* Shrink block size */
   border-radius: 10px;
   text-align: center;
 }
@@ -108,23 +68,19 @@ hr {
   margin: 10px 0;
 }
 
-/* Disable scrolling on larger screens */
-body {
-  overflow: hidden;
-}
-
-/* Allow scrolling on narrow screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   body {
     overflow: auto; /* Enables scrolling */
   }
 
   .block {
-    width: 100%;
+    width: 90%; /* Adjust block width for mobile */
     margin: 10px 0;
   }
 }
-    </style>
+</style>
+
 </head>
 <body>    
     <div class="container">
