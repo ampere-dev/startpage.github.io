@@ -24,13 +24,11 @@
         }
 
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, 160px);
-            gap: 10px;
+            column-width: 160px;
+            column-gap: 10px;
             padding: 20px;
             max-width: 1280px;
             margin: 0 auto;
-            justify-content: space-between;
         }
 
         .block {
@@ -40,6 +38,8 @@
             text-align: center;
             width: 160px;
             box-sizing: border-box;
+            break-inside: avoid;
+            margin-bottom: 10px;
         }
 
         .block p {
@@ -81,7 +81,7 @@
 
         @media (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr;
+                column-count: 1;
                 padding: 10px;
             }
 
@@ -93,7 +93,7 @@
 
         @media (min-width: 1200px) {
             .container {
-                grid-template-columns: repeat(7, 160px);
+                column-count: 7;
             }
         }
     </style>
@@ -251,7 +251,7 @@
             <a href="https://3dprintingindustry.com/" aria-label="3D Printing Industry News">3D Printing Industry</a>
             <a href="https://coex3d.com/" aria-label="COEX 3D Printing">COEX</a>
             <a href="https://www.pushplastic.com/" aria-label="Push Plastic 3D Printing Filaments">Push Plastic</a>
-            <a href="https://www.mosaicmfg.com/" aria-label="Mosaic Manufacturing">Mosaic</a>
+            <a href="https://www.mosaicmfg Ministries.com/" aria-label="Mosaic Manufacturing">Mosaic</a>
             <a href="https://www.3dxtech.com/" aria-label="3DXTech 3D Printing Materials">3DX Tech</a>
             <a href="https://vorondesign.com/" aria-label="VORON 3D Printer Designs">VORON</a>
             <a href="https://www.3dfuel.com/" aria-label="3D Fuel Filaments">3D Fuel</a>
