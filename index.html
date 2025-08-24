@@ -4,60 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A curated collection of resources for electrical engineering, computing, Linux, weather, transformers, building automation, and research.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <title>Welcome Home</title>
     <style>
         /* General styling */
-        body, html {
-            height: 100%;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Ubuntu', sans-serif;
             background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
             background-size: cover;
-            color: white;
+            color: #ffffff;
+            min-height: 100vh;
         }
 
         .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .block {
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for better contrast */
+            padding: 20px;
             border-radius: 10px;
             text-align: center;
-            width: 180px;
         }
 
         .block p {
             margin: 10px 0;
-            font-weight: bold;
-            font-size: 16px;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
         .block hr {
             border: 0;
-            border-top: 1px solid white;
+            border-top: 1px solid #ffffff;
             margin: 10px 0;
         }
 
         a {
             text-decoration: none;
-            color: white;
-            font-size: 14px;
-            display: inline-block;
+            color: #ffffff;
+            font-size: 0.9rem;
+            display: block;
             margin: 5px 0;
-            padding: 2px 5px;
+            padding: 5px;
             transition: background-color 0.3s, color 0.3s;
+            border-radius: 3px;
         }
 
         a:hover, a:focus {
             background-color: #88ace0;
             color: #0047ab;
+            outline: 2px solid #ffffff; /* Added for keyboard navigation */
         }
 
         img {
@@ -67,354 +76,381 @@
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            body {
-                overflow: auto;
+            .container {
+                grid-template-columns: 1fr;
+                padding: 10px;
             }
 
             .block {
                 width: 90%;
-                margin: 10px 0;
+                margin: 10px auto;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                grid-template-columns: repeat(4, 1fr);
             }
         }
     </style>
 </head>
 <body>
-<div class="container">
-<div class="block">
-    <p>News</p>
-    <hr>
-    <a href="https://rantingly.com/">Rantingly</a>
-    <a href="https://infowars.com">Infowars</a>
-    <a href="https://breitbart.com/">Breitbart</a>
-    <a href="https://news.google.com/?hl=en-US&gl=US&ceid=US:en">Google</a>
-    <a href="https://www.rt.com/">RT</a>
-    <a href="https://www.oann.com/">OANN</a>
-    <a href="https://townhall.com/">Townhall</a>
-    <a href="https://www.feedly.com">Feedly</a>
-    <a href="https://www.whatfinger.com/">Whatfinger</a>
-    <a href="https://thelibertydaily.com/">Liberty Daily</a>
-    <a href="https://www.americanthinker.com/">Thinker</a>
-    <a href="https://www.washingtonexaminer.com/">Examiner</a>
-    <a href="https://bonginoreport.com/">Bongino</a>
-    <a href="https://thenewamerican.com/">New American</a>
-    <a href="https://halturnerradioshow.com/index.php/en/">Hal Turner</a>
-    <a href="https://www.theepochtimes.com">The Epoch Times</a>
-    <a href="https://www.zerohedge.com">ZeroHedge</a>
-    <a href="https://www.reuters.com">Reuters</a>
-    <a href="https://www.newsmax.com">Newsmax</a>
-</div>
+    <div class="container">
+        <!-- News Block -->
+        <section class="block" aria-labelledby="news">
+            <p id="news">News</p>
+            <hr>
+            <a href="https://rantingly.com/" aria-label="Rantingly News">Rantingly</a>
+            <a href="https://infowars.com" aria-label="Infowars">Infowars</a>
+            <a href="https://breitbart.com/" aria-label="Breitbart News">Breitbart</a>
+            <a href="https://news.google.com/?hl=en-US&gl=US&ceid=US:en" aria-label="Google News">Google</a>
+            <a href="https://www.rt.com/" aria-label="RT News">RT</a>
+            <a href="https://www.oann.com/" aria-label="One America News Network">OANN</a>
+            <a href="https://townhall.com/" aria-label="Townhall">Townhall</a>
+            <a href="https://www.feedly.com" aria-label="Feedly News Aggregator">Feedly</a>
+            <a href="https://www.whatfinger.com/" aria-label="Whatfinger News">Whatfinger</a>
+            <a href="https://thelibertydaily.com/" aria-label="The Liberty Daily">Liberty Daily</a>
+            <a href="https://www.americanthinker.com/" aria-label="American Thinker">Thinker</a>
+            <a href="https://www.washingtonexaminer.com/" aria-label="Washington Examiner">Examiner</a>
+            <a href="https://bonginoreport.com/" aria-label="Bongino Report">Bongino</a>
+            <a href="https://thenewamerican.com/" aria-label="The New American">New American</a>
+            <a href="https://halturnerradioshow.com/index.php/en/" aria-label="Hal Turner Radio Show">Hal Turner</a>
+            <a href="https://www.theepochtimes.com" aria-label="The Epoch Times">The Epoch Times</a>
+            <a href="https://www.zerohedge.com" aria-label="ZeroHedge">ZeroHedge</a>
+            <a href="https://www.reuters.com" aria-label="Reuters News">Reuters</a>
+            <a href="https://www.newsmax.com" aria-label="Newsmax">Newsmax</a>
+        </section>
 
-<div class="block">
-    <p>Bills</p>
-    <hr>
-    <a href="https://bge.com">BGE</a>
-    <a href="https://t-mobile.com">T-Mobile</a>
-    <a href="https://business.comcast.com">Comcast</a>
-    <a href="https://aacounty.munisselfservice.com/citizens/RealEstate/Default.aspx?mode=new">Property Taxes</a>
-    <a href="https://customer.lifeessentials.nationwide.com/">Life Insurance</a>
-    <a href="https://auth.proofing.statefarm.com/login-ui/login/">Auto Insurance</a>
-    <a href="https://www.mint.com">Mint</a>
-</div>
+        <!-- Bills Block -->
+        <section class="block" aria-labelledby="bills">
+            <p id="bills">Bills</p>
+            <hr>
+            <a href="https://bge.com" aria-label="BGE Utility Services">BGE</a>
+            <a href="https://t-mobile.com" aria-label="T-Mobile">T-Mobile</a>
+            <a href="https://business.comcast.com" aria-label="Comcast Business">Comcast</a>
+            <a href="https://aacounty.munisselfservice.com/citizens/RealEstate/Default.aspx?mode=new" aria-label="Anne Arundel County Property Taxes">Property Taxes</a>
+            <a href="https://customer.lifeessentials.nationwide.com/" aria-label="Nationwide Life Insurance">Life Insurance</a>
+            <a href="https://auth.proofing.statefarm.com/login-ui/login/" aria-label="State Farm Auto Insurance">Auto Insurance</a>
+            <a href="https://www.mint.com" aria-label="Mint Personal Finance">Mint</a>
+        </section>
 
-<div class="block">
-    <p>Social Media</p>
-    <hr>
-    <a href="https://youtube.com">YouTube</a>
-    <a href="https://old.reddit.com">Reddit</a>
-    <a href="https://patriots.win/">Patriots.win</a>
-    <a href="https://icloud.com">iCloud</a>
-    <a href="https://censored.tv/">Censored</a>
-    <a href="https://odysee.com/">Odysee</a>
-    <a href="https://www.gettr.com">Gettr</a>
-    <a href="https://rumble.com">Rumble</a>
-    <a href="https://truthsocial.com">Truth Social</a>
-</div>
+        <!-- Social Media Block -->
+        <section class="block" aria-labelledby="social-media">
+            <p id="social-media">Social Media</p>
+            <hr>
+            <a href="https://youtube.com" aria-label="YouTube">YouTube</a>
+            <a href="https://old.reddit.com" aria-label="Reddit">Reddit</a>
+            <a href="https://patriots.win/" aria-label="Patriots.win">Patriots.win</a>
+            <a href="https://icloud.com" aria-label="Apple iCloud">iCloud</a>
+            <a href="https://censored.tv/" aria-label="Censored TV">Censored</a>
+            <a href="https://odysee.com/" aria-label="Odysee">Odysee</a>
+            <a href="https://www.gettr.com" aria-label="Gettr">Gettr</a>
+            <a href="https://rumble.com" aria-label="Rumble">Rumble</a>
+            <a href="https://truthsocial.com" aria-label="Truth Social">Truth Social</a>
+        </section>
 
-<div class="block">
-    <p>Business</p>
-    <hr>
-    <a href="https://hbr.org/">HBR</a>
-    <a href="https://hbswk.hbs.edu/">HBS</a>
-    <a href="https://www.score.org/">Score.org</a>
-    <a href="https://analytics.google.com/analytics/web/#/report-home/a157521934w221696257p210720324/">Analytics</a>
-    <a href="https://account.squarespace.com/domains">Domains</a>
-    <a href="https://search.google.com/search-console?resource_id=sc-domain%3Aampere.dev/">Google Search Console</a>
-    <a href="https://dash.cloudflare.com/c71cde56bb466af4b489c64ace69c76a/ampere.dev/analytics/traffic/">Cloudflare Analytics Traffic</a>
-    <a href="https://console.cloud.google.com/home/dashboard?project=bitnami-2ee9x91znq&pli=1">Loadbank Wiki</a>
-    <a href="https://google.bitnami.com/vms/bitnami-mediawiki-dm-7b1b">Wiki Dev</a>
-    <a href="https://www.entrepreneur.com">Entrepreneur</a>
-    <a href="https://moz.com">Moz</a>
-</div>
+        <!-- Business Block -->
+        <section class="block" aria-labelledby="business">
+            <p id="business">Business</p>
+            <hr>
+            <a href="https://hbr.org/" aria-label="Harvard Business Review">HBR</a>
+            <a href="https://hbswk.hbs.edu/" aria-label="Harvard Business School Working Knowledge">HBS</a>
+            <a href="https://www.score.org/" aria-label="SCORE Business Mentoring">Score.org</a>
+            <a href="https://analytics.google.com/analytics/web/#/report-home/a157521934w221696257p210720324/" aria-label="Google Analytics">Analytics</a>
+            <a href="https://account.squarespace.com/domains" aria-label="Squarespace Domains">Domains</a>
+            <a href="https://search.google.com/search-console?resource_id=sc-domain%3Aampere.dev/" aria-label="Google Search Console for ampere.dev">Google Search Console</a>
+            <a href="https://dash.cloudflare.com/c71cde56bb466af4b489c64ace69c76a/ampere.dev/analytics/traffic/" aria-label="Cloudflare Analytics Traffic for ampere.dev">Cloudflare Analytics Traffic</a>
+            <a href="https://console.cloud.google.com/home/dashboard?project=bitnami-2ee9x91znq&pli=1" aria-label="Google Cloud Console for Loadbank Wiki">Loadbank Wiki</a>
+            <a href="https://google.bitnami.com/vms/bitnami-mediawiki-dm-7b1b" aria-label="Bitnami MediaWiki Development">Wiki Dev</a>
+            <a href="https://www.entrepreneur.com" aria-label="Entrepreneur Magazine">Entrepreneur</a>
+            <a href="https://moz.com" aria-label="Moz SEO Tools">Moz</a>
+        </section>
 
-<div class="block">
-    <p>Computers</p>
-    <hr>
-    <a href="https://www.raspberrypi.org/">Raspberry Pi</a>
-    <a href="https://www.arduino.cc/">Arduino</a>
-    <a href="https://krebsonsecurity.com/">Brian Krebs</a>
-    <a href="https://www.cringely.com/">Cringley</a>
-    <a href="https://www.tomshardware.com">Tom’s Hardware</a>
-    <a href="https://www.bleepingcomputer.com">Bleeping Computer</a>
-    <a href="https://hackaday.com">Hackaday</a>
-    <a href="https://www.anandtech.com/">AnandTech</a>
-    <a href="https://www.theverge.com/">The Verge</a>
-    <a href="https://www.wired.com/">Wired</a>
-    <a href="https://techcrunch.com/">TechCrunch</a>
-    <a href="https://makezine.com/">Make Magazine</a>
-    <a href="https://www.overclockers.com/">Overclockers</a>
-    <a href="https://www.darkreading.com/">Dark Reading</a>
-    <a href="https://www.phoronix.com/">Phoronix</a>
-</div>
+        <!-- Computers Block -->
+        <section class="block" aria-labelledby="computers">
+            <p id="computers">Computers</p>
+            <hr>
+            <a href="https://www.raspberrypi.org/" aria-label="Raspberry Pi Foundation">Raspberry Pi</a>
+            <a href="https://www.arduino.cc/" aria-label="Arduino Official Site">Arduino</a>
+            <a href="https://krebsonsecurity.com/" aria-label="Krebs on Security">Brian Krebs</a>
+            <a href="https://www.cringely.com/" aria-label="Robert X. Cringely">Cringley</a>
+            <a href="https://www.tomshardware.com" aria-label="Tom's Hardware">Tom’s Hardware</a>
+            <a href="https://www.bleepingcomputer.com" aria-label="Bleeping Computer">Bleeping Computer</a>
+            <a href="https://hackaday.com" aria-label="Hackaday">Hackaday</a>
+            <a href="https://www.anandtech.com/" aria-label="AnandTech">AnandTech</a>
+            <a href="https://www.theverge.com/" aria-label="The Verge">The Verge</a>
+            <a href="https://www.wired.com/" aria-label="Wired Magazine">Wired</a>
+            <a href="https://techcrunch.com/" aria-label="TechCrunch">TechCrunch</a>
+            <a href="https://makezine.com/" aria-label="Make Magazine">Make Magazine</a>
+            <a href="https://www.overclockers.com/" aria-label="Overclockers">Overclockers</a>
+            <a href="https://www.darkreading.com/" aria-label="Dark Reading">Dark Reading</a>
+            <a href="https://www.phoronix.com/" aria-label="Phoronix">Phoronix</a>
+        </section>
 
-<div class="block">
-  <p>Electrical</p>
-  <hr>
-  <a href="https://electrical-engineering-portal.com">EE Portal</a>
-  <a href="https://www.windpowermonthly.com/">Windpower</a>
-  <a href="https://www.datacenterknowledge.com/">DataCenter Knowledge</a>
-  <a href="https://electricenergyonline.com/">EE Online</a>
-  <a href="https://www.tdworld.com/">T&D World</a>
-  <a href="https://community.nfpa.org/">NFPA</a>
-  <a href="http://www.egsa.org/">EGSA</a>
-  <a href="https://www.eia.gov/">EIA</a>
-  <a href="https://www.nrel.gov/research/publications.html/">NREL</a>
-  <a href="https://spectrum.ieee.org">IEEE Spectrum</a>
-  <a href="https://www.greentechmedia.com">Greentech Media</a>
-  <a href="https://www.powermag.com">Power Magazine</a>
-  <a href="https://www.utilitydive.com/">Utility Dive</a>
-  <a href="https://www.renewableenergyworld.com/">Renewable Energy World</a>
-  <a href="https://www.power-eng.com/">Power Engineering</a>
-  <a href="https://energycentral.com/">Energy Central</a>
-  <a href="https://www.smartgridnews.com/">Smart Grid News</a>
-  <a href="https://www.pv-magazine.com/">PV Magazine</a>
-  <a href="https://www.electronicsweekly.com/">Electronics Weekly</a>
-  <a href="https://ieeexplore.ieee.org/">IEEE Xplore</a>
-  <a href="https://www.solarpowerworldonline.com/">Solar Power World</a>
-  <a href="https://www.hydroreview.com/">Hydro Review</a>
-</div>
+    <div class="container">
+        <!-- Electrical Block -->
+        <section class="block" aria-labelledby="electrical">
+            <p id="electrical">Electrical</p>
+            <hr>
+            <a href="https://electrical-engineering-portal.com" aria-label="Electrical Engineering Portal">EE Portal</a>
+            <a href="https://www.windpowermonthly.com/" aria-label="Windpower Monthly">Windpower</a>
+            <a href="https://www.datacenterknowledge.com/" aria-label="DataCenter Knowledge">DataCenter Knowledge</a>
+            <a href="https://electricenergyonline.com/" aria-label="Electric Energy Online">EE Online</a>
+            <a href="https://www.tdworld.com/" aria-label="Transmission & Distribution World">T&D World</a>
+            <a href="https://community.nfpa.org/" aria-label="National Fire Protection Association">NFPA</a>
+            <a href="http://www.egsa.org/" aria-label="Electrical Generating Systems Association">EGSA</a>
+            <a href="https://www.eia.gov/" aria-label="U.S. Energy Information Administration">EIA</a>
+            <a href="https://www.nrel.gov/research/publications.html/" aria-label="National Renewable Energy Laboratory">NREL</a>
+            <a href="https://spectrum.ieee.org" aria-label="IEEE Spectrum">IEEE Spectrum</a>
+            <a href="https://www.greentechmedia.com" aria-label="Greentech Media">Greentech Media</a>
+            <a href="https://www.powermag.com" aria-label="Power Magazine">Power Magazine</a>
+            <a href="https://www.utilitydive.com/" aria-label="Utility Dive">Utility Dive</a>
+            <a href="https://www.renewableenergyworld.com/" aria-label="Renewable Energy World">Renewable Energy World</a>
+            <a href="https://www.power-eng.com/" aria-label="Power Engineering">Power Engineering</a>
+            <a href="https://energycentral.com/" aria-label="Energy Central">Energy Central</a>
+            <a href="https://www.smartgridnews.com/" aria-label="Smart Grid News">Smart Grid News</a>
+            <a href="https://www.pv-magazine.com/" aria-label="PV Magazine">PV Magazine</a>
+            <a href="https://www.electronicsweekly.com/" aria-label="Electronics Weekly">Electronics Weekly</a>
+            <a href="https://ieeexplore.ieee.org/" aria-label="IEEE Xplore Digital Library">IEEE Xplore</a>
+            <a href="https://www.solarpowerworldonline.com/" aria-label="Solar Power World">Solar Power World</a>
+            <a href="https://www.hydroreview.com/" aria-label="Hydro Review">Hydro Review</a>
+        </section>
 
-<div class="block">
-    <p>Linux</p>
-    <hr>
-    <a href="https://blog.linuxmint.com/">Mint Blog</a>
-    <a href="https://linux.slashdot.org/">Slashdot</a>
-    <a href="http://lxer.com/">News</a>
-    <a href="https://www.linuxtoday.com">Today</a>
-    <a href="https://linuxsecurity.com/">Security</a>
-    <a href="https://www.linux.com">Linux.com</a>
-    <a href="https://distrowatch.com/">Distrowatch</a>
-    <a href="https://itsfoss.com">It’s FOSS</a>
-    <a href="https://www.phoronix.com">Phoronix</a>
-    <a href="https://www.linuxjournal.com">Linux Journal</a>
-    <a href="https://ubuntu.com/blog">Ubuntu Blog</a>
-    <a href="https://www.omgubuntu.co.uk/">OMG! Ubuntu!</a>
-    <a href="https://www.linux.org/">Linux.org</a>
-    <a href="https://www.linuxfoundation.org/">The Linux Foundation</a>
-    <a href="https://fosspost.org/">FOSS Post</a>
-    <a href="https://www.linuxinsider.com/">LinuxInsider</a>
-    <a href="https://www.tecmint.com/">TecMint</a>
-    <a href="https://lwn.net/">LWN.net</a>
-</div>
 
-<div class="block">
-    <p>Tech</p>
-    <hr>
-    <a href="https://apple.com">Apple</a>
-    <a href="https://amazon.com">Amazon</a>
-    <a href="https://ebay.com">eBay</a>
-    <a href="https://paypal.com">Paypal</a>
-    <a href="https://www.nextbigfuture.com">Next Big Future</a>
-    <a href="https://slashdot.org">Slashdot</a>
-    <a href="https://github.com">GitHub</a>
-    <a href="https://www.fiverr.com/">Fiverr</a>
-    <a href="https://home.nest.com/home/94c40bc0-ea53-11e6-8f13-22000b8e40e1">Nest</a>
-    <a href="https://www.onenote.com">OneNote</a>
-    <a href="https://www.iposcoop.com">IPOs</a>
-    <a href="https://pagespeed.web.dev">PageSpeed</a>
-    <a href="https://techcrunch.com">TechCrunch</a>
-    <a href="https://stackoverflow.com">Stack Overflow</a>
-    <a href="https://www.theverge.com">The Verge</a>
-</div>
+        <!-- Linux Block -->
+        <section class="block" aria-labelledby="linux">
+            <p id="linux">Linux</p>
+            <hr>
+            <a href="https://blog.linuxmint.com/" aria-label="Linux Mint Blog">Mint Blog</a>
+            <a href="https://linux.slashdot.org/" aria-label="Slashdot Linux News">Slashdot</a>
+            <a href="http://lxer.com/" aria-label="LXer Linux News">News</a>
+            <a href="https://www.linuxtoday.com" aria-label="Linux Today">Today</a>
+            <a href="https://linuxsecurity.com/" aria-label="Linux Security">Security</a>
+            <a href="https://www.linux.com" aria-label="Linux.com">Linux.com</a>
+            <a href="https://distrowatch.com/" aria-label="DistroWatch">Distrowatch</a>
+            <a href="https://itsfoss.com" aria-label="It's FOSS">It’s FOSS</a>
+            <a href="https://www.phoronix.com" aria-label="Phoronix">Phoronix</a>
+            <a href="https://www.linuxjournal.com" aria-label="Linux Journal">Linux Journal</a>
+            <a href="https://ubuntu.com/blog" aria-label="Ubuntu Official Blog">Ubuntu Blog</a>
+            <a href="https://www.omgubuntu.co.uk/" aria-label="OMG! Ubuntu!">OMG! Ubuntu!</a>
+            <a href="https://www.linux.org/" aria-label="Linux.org">Linux.org</a>
+            <a href="https://www.linuxfoundation.org/" aria-label="The Linux Foundation">The Linux Foundation</a>
+            <a href="https://fosspost.org/" aria-label="FOSS Post">FOSS Post</a>
+            <a href="https://www.linuxinsider.com/" aria-label="LinuxInsider">LinuxInsider</a>
+            <a href="https://www.tecmint.com/" aria-label="TecMint">TecMint</a>
+            <a href="https://lwn.net/" aria-label="LWN.net">LWN.net</a>
+        </section>
 
-<div class="block">
-    <p>Weather</p>
-    <hr>
-    <a href="https://weather.com/weather/tenday/l/USDC0001:1:US">Wash, DC 10 Day</a>
-    <a href="https://www.wunderground.com/wundermap?lat=38.73402405&lon=-76.65898132&zoom=8&pin=Dunkirk,%20MD&rad=1&wxsn=0&svr=0&cams=0&sat=0&riv=0&mm=0&hur=0">Wundermap</a>
-    <a href="https://www.nhc.noaa.gov">Hurricane Center</a>
-    <a href="https://www.windy.com/?38.737,-76.590,6">Windy</a>
-    <a href="https://www.justinweather.com">Justin Weather</a>
-    <a href="https://www.weather.gov">NOAA Weather</a>
-    <a href="https://www.accuweather.com">AccuWeather</a>
-    <a href="https://www.ventusky.com">Ventusky</a>
-    <a href="https://www.wunderground.com/">Weather Underground</a>
-    <a href="https://weather.com/">The Weather Channel</a>
-    <a href="https://www.spc.noaa.gov/">Storm Prediction Center</a>
-    <a href="https://weatherspark.com/">WeatherSpark</a>
-    <a href="https://www.meteoblue.com/">MeteoBlue</a>
-    <a href="https://www.tropicaltidbits.com/">Tropical Tidbits</a>
-    <a href="https://www.weatherbit.io/">WeatherBit</a>
-    <a href="https://www.tomorrow.io/">ClimaCell</a>
-</div>
+    <div class="container">
+        <!-- Tech Block -->
+        <section class="block" aria-labelledby="tech">
+            <p id="tech">Tech</p>
+            <hr>
+            <a href="https://apple.com" aria-label="Apple Official Website">Apple</a>
+            <a href="https://amazon.com" aria-label="Amazon">Amazon</a>
+            <a href="https://ebay.com" aria-label="eBay">eBay</a>
+            <a href="https://paypal.com" aria-label="PayPal">Paypal</a>
+            <a href="https://www.nextbigfuture.com" aria-label="Next Big Future">Next Big Future</a>
+            <a href="https://slashdot.org" aria-label="Slashdot Technology News">Slashdot</a>
+            <a href="https://github.com" aria-label="GitHub">GitHub</a>
+            <a href="https://www.fiverr.com/" aria-label="Fiverr Freelance Services">Fiverr</a>
+            <a href="https://home.nest.com/home/94c40bc0-ea53-11e6-8f13-22000b8e40e1" aria-label="Nest Smart Home">Nest</a>
+            <a href="https://www.onenote.com" aria-label="Microsoft OneNote">OneNote</a>
+            <a href="https://www.iposcoop.com" aria-label="IPO Scoop">IPOs</a>
+            <a href="https://pagespeed.web.dev" aria-label="Google PageSpeed Insights">PageSpeed</a>
+            <a href="https://techcrunch.com" aria-label="TechCrunch">TechCrunch</a>
+            <a href="https://stackoverflow.com" aria-label="Stack Overflow">Stack Overflow</a>
+            <a href="https://www.theverge.com" aria-label="The Verge">The Verge</a>
+        </section>
 
-<div class="block">
-    <p>Loadbank Rentals</p>
-    <hr>
-    <a href="https://ampere.dev">Ampere</a>
-    <a href="https://www.sunbeltrentals.com/equipment-rental/load-banks/">Sunbelt</a>
-    <a href="https://www.unitedrentals.com/marketplace/equipment/power-hvac/load-banks#/">United Rentals</a>
-    <a href="https://crestchicloadbanks.com/loadbank-rental/">Crestchic</a>
-    <a href="https://kwickequip.com/">Kwick</a>
-    <a href="https://www.critical2u.com/">CPTAM</a>
-    <a href="https://www.simplexonsite.com/">Simplex</a>
-    <a href="https://www.aggreko.com/en-ca/products/generator-rental/load-bank-rental/">Aggreko</a>
-    <a href="https://www.hercrentals.com/us/rentals/power-generation/load-banks.html/">Herc</a>
-    <a href="https://www.philipsbrothers.com/inventory/category/load-banks/">Philips</a>
-    <a href="https://lbstesting.com/">LBS</a>
-    <a href="https://www.cat.com/en_US/products/new/rental.html">Caterpillar</a>
-    <a href="https://www.jovalindustrial.com">Joval Industrial</a>
-</div>
+        <!-- Weather Block -->
+        <section class="block" aria-labelledby="weather">
+            <p id="weather">Weather</p>
+            <hr>
+            <a href="https://www.weather.gov" aria-label="NOAA National Weather Service">NOAA Weather</a>
+            <a href="https://www.accuweather.com" aria-label="AccuWeather">AccuWeather</a>
+            <a href="https://www.ventusky.com" aria-label="Ventusky Weather Visualization">Ventusky</a>
+            <a href="https://www.wunderground.com/" aria-label="Weather Underground">Weather Underground</a>
+            <a href="https://weather.com/" aria-label="The Weather Channel">The Weather Channel</a>
+            <a href="https://www.nhc.noaa.gov" aria-label="National Hurricane Center">Hurricane Center</a>
+            <a href="https://www.windy.com/?38.737,-76.590,6" aria-label="Windy Weather Visualization">Windy</a>
+            <a href="https://www.justinweather.com" aria-label="Justin Weather">Justin Weather</a>
+            <a href="https://www.spc.noaa.gov/" aria-label="Storm Prediction Center">Storm Prediction Center</a>
+            <a href="https://weatherspark.com/" aria-label="WeatherSpark">WeatherSpark</a>
+            <a href="https://www.meteoblue.com/" aria-label="MeteoBlue">MeteoBlue</a>
+            <a href="https://www.tropicaltidbits.com/" aria-label="Tropical Tidbits">Tropical Tidbits</a>
+            <a href="https://www.weatherbit.io/" aria-label="WeatherBit">WeatherBit</a>
+            <a href="https://www.tomorrow.io/" aria-label="Tomorrow.io (ClimaCell)">ClimaCell</a>
+        </section>
 
-<div class="block">
-    <p>Loadbank Builders</p>
-    <hr>
-    <a href="https://ampere.dev">Ampere</a>
-    <a href="https://avtronpower.com/">AVTRON</a>
-    <a href="https://loadbanksdirect.com">Loadbanks Direct</a>
-    <a href="https://www.eepowersolutions.com">EagleEye</a>
-    <a href="http://www.cannonloadbanks.com/">Cannon</a>
-    <a href="https://crestchicloadbanks.com/">Crestchic</a>
-    <a href="https://www.simplexdirect.com/">Simplex</a>
-    <a href="https://www.gilbertelectricalsystems.com/">Gilbert/Elgin</a>
-    <a href="https://www.avtronpower.com">Avtron</a>
-</div>
+        <!-- Loadbank Rentals Block -->
+        <section class="block" aria-labelledby="loadbank-rentals">
+            <p id="loadbank-rentals">Loadbank Rentals</p>
+            <hr>
+            <a href="https://ampere.dev" aria-label="Ampere Loadbank Rentals">Ampere</a>
+            <a href="https://www.sunbeltrentals.com/equipment-rental/load-banks/" aria-label="Sunbelt Rentals Load Banks">Sunbelt</a>
+            <a href="https://www.unitedrentals.com/marketplace/equipment/power-hvac/load-banks#/" aria-label="United Rentals Load Banks">United Rentals</a>
+            <a href="https://crestchicloadbanks.com/loadbank-rental/" aria-label="Crestchic Loadbank Rentals">Crestchic</a>
+            <a href="https://kwickequip.com/" aria-label="Kwick Equipment Rentals">Kwick</a>
+            <a href="https://www.critical2u.com/" aria-label="CPTAM Critical Power">CPTAM</a>
+            <a href="https://www.simplexonsite.com/" aria-label="Simplex Onsite Load Banks">Simplex</a>
+            <a href="https://www.aggreko.com/en-ca/products/generator-rental/load-bank-rental/" aria-label="Aggreko Loadbank Rentals">Aggreko</a>
+            <a href="https://www.hercrentals.com/us/rentals/power-generation/load-banks.html/" aria-label="Herc Rentals Load Banks">Herc</a>
+            <a href="https://www.philipsbrothers.com/inventory/category/load-banks/" aria-label="Philips Brothers Load Banks">Philips</a>
+            <a href="https://lbstesting.com/" aria-label="Load Bank Systems Testing">LBS</a>
+            <a href="https://www.cat.com/en_US/products/new/rental.html" aria-label="Caterpillar Rental Solutions">Caterpillar</a>
+            <a href="https://www.jovalindustrial.com" aria-label="Joval Industrial">Joval Industrial</a>
+        </section>
 
-<div class="block">
-    <p>3D Printing</p>
-    <hr>
-    <a href="https://3dprintingindustry.com/">3D Printing Industry</a>
-    <a href="https://coex3d.com/">COEX</a>
-    <a href="https://www.pushplastic.com/">Push Plastic</a>
-    <a href="https://www.mosaicmfg.com/">Mosaic</a>
-    <a href="https://www.3dxtech.com/">3DX Tech</a>
-    <a href="https://vorondesign.com/">VORON</a>
-    <a href="https://www.3dfuel.com/">3D Fuel</a>
-    <a href="https://www.prusa3d.com">Prusa Research</a>
-    <a href="https://all3dp.com">All3DP</a>
-    <a href="https://us.polymaker.com">Polymaker</a>
-</div>
+        <!-- Loadbank Builders Block -->
+        <section class="block" aria-labelledby="loadbank-builders">
+            <p id="loadbank-builders">Loadbank Builders</p>
+            <hr>
+            <a href="https://ampere.dev" aria-label="Ampere Loadbank Builders">Ampere</a>
+            <a href="https://avtronpower.com/" aria-label="Avtron Power Solutions">AVTRON</a>
+            <a href="https://loadbanksdirect.com" aria-label="Loadbanks Direct">Loadbanks Direct</a>
+            <a href="https://www.eepowersolutions.com" aria-label="EagleEye Power Solutions">EagleEye</a>
+            <a href="http://www.cannonloadbanks.com/" aria-label="Cannon Load Banks">Cannon</a>
+            <a href="https://crestchicloadbanks.com/" aria-label="Crestchic Loadbanks">Crestchic</a>
+            <a href="https://www.simplexdirect.com/" aria-label="Simplex Load Banks">Simplex</a>
+            <a href="https://www.gilbertelectricalsystems.com/" aria-label="Gilbert Electrical Systems">Gilbert/Elgin</a>
+        </section>
 
-<div class="block">
-    <p>Electrical Parts</p>
-    <hr>
-    <a href="https://octopart.com/">Octopart</a>
-    <a href="https://alpscontrols.com/">Alps Controls</a>
-    <a href="https://www.c3controls.com/">C3 Controls</a>
-    <a href="https://www.alliedelec.com/">Allied Electronics</a>
-    <a href="https://www.galco.com/">Galco</a>
-    <a href="https://www.mouser.com/">Mouser</a>
-    <a href="https://www.newark.com/">Newark</a>
-    <a href="https://www.digikey.com">DigiKey</a>
-    <a href="https://www.phoenixcontact.com/en-us/">Phoenix Contact</a>
-    <a href="https://www.arrow.com/">Arrow Electronics</a>
-    <a href="https://www.farnell.com/">Farnell</a>
-    <a href="https://www.jameco.com/">Jameco Electronics</a>
-    <a href="https://www.tme.com/">TME</a>
-    <a href="https://www.rs-online.com/">RS Components</a>
-    <a href="https://www.te.com/">TE Connectivity</a>
-    <a href="https://www.sparkfun.com/">SparkFun Electronics</a>
-    <a href="https://www.avnet.com/">Avnet</a>
-</div>
+        <!-- 3D Printing Block -->
+        <section class="block" aria-labelledby="3d-printing">
+            <p id="3d-printing">3D Printing</p>
+            <hr>
+            <a href="https://3dprintingindustry.com/" aria-label="3D Printing Industry News">3D Printing Industry</a>
+            <a href="https://coex3d.com/" aria-label="COEX 3D Printing">COEX</a>
+            <a href="https://www.pushplastic.com/" aria-label="Push Plastic 3D Printing Filaments">Push Plastic</a>
+            <a href="https://www.mosaicmfg.com/" aria-label="Mosaic Manufacturing">Mosaic</a>
+            <a href="https://www.3dxtech.com/" aria-label="3DXTech 3D Printing Materials">3DX Tech</a>
+            <a href="https://vorondesign.com/" aria-label="VORON 3D Printer Designs">VORON</a>
+            <a href="https://www.3dfuel.com/" aria-label="3D Fuel Filaments">3D Fuel</a>
+            <a href="https://www.prusa3d.com" aria-label="Prusa Research 3D Printers">Prusa Research</a>
+            <a href="https://all3dp.com" aria-label="All3DP 3D Printing Resources">All3DP</a>
+            <a href="https://us.polymaker.com" aria-label="Polymaker 3D Printing Materials">Polymaker</a>
+        </section>
 
-<div class="block">
-    <p>Power Cable</p>
-    <hr>
-    <a href="https://www.trystar.com/">Trystar</a>
-    <a href="https://www.pittsburghwire.com/">Pittsburgh Wire</a>
-    <a href="https://www.southwire.com">Southwire</a>
-    <a href="https://windycitywire.com/">WindyCity</a>
-</div>
+        <!-- Electrical Parts Block -->
+        <section class="block" aria-labelledby="electrical-parts">
+            <p id="electrical-parts">Electrical Parts</p>
+            <hr>
+            <a href="https://octopart.com/" aria-label="Octopart Component Search">Octopart</a>
+            <a href="https://alpscontrols.com/" aria-label="Alps Controls HVAC Components">Alps Controls</a>
+            <a href="https://www.c3controls.com/" aria-label="C3 Controls Industrial Controls">C3 Controls</a>
+            <a href="https://www.alliedelec.com/" aria-label="Allied Electronics">Allied Electronics</a>
+            <a href="https://www.galco.com/" aria-label="Galco Industrial Electronics">Galco</a>
+            <a href="https://www.mouser.com/" aria-label="Mouser Electronics">Mouser</a>
+            <a href="https://www.newark.com/" aria-label="Newark Electronics">Newark</a>
+            <a href="https://www.digikey.com" aria-label="DigiKey Electronics">DigiKey</a>
+            <a href="https://www.phoenixcontact.com/en-us/" aria-label="Phoenix Contact">Phoenix Contact</a>
+            <a href="https://www.arrow.com/" aria-label="Arrow Electronics">Arrow Electronics</a>
+            <a href="https://www.farnell.com/" aria-label="Farnell Electronics">Farnell</a>
+            <a href="https://www.jameco.com/" aria-label="Jameco Electronics">Jameco Electronics</a>
+            <a href="https://www.tme.com/" aria-label="TME Electronic Components">TME</a>
+            <a href="https://www.rs-online.com/" aria-label="RS Components">RS Components</a>
+            <a href="https://www.te.com/" aria-label="TE Connectivity">TE Connectivity</a>
+            <a href="https://www.sparkfun.com/" aria-label="SparkFun Electronics">SparkFun Electronics</a>
+            <a href="https://www.avnet.com/" aria-label="Avnet Electronics">Avnet</a>
+        </section>
 
-<div class="block">
-    <p>Research</p>
-    <hr>
-    <a href="https://www.researchgate.net/">ResearchGate</a>
-    <a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>
-    <a href="https://www.jstor.org/">JSTOR</a>
-    <a href="https://www.semanticscholar.org/">Semantic Scholar</a>
-    <a href="https://www.zotero.org/">Zotero</a>
-    <a href="https://openalex.org/">OpenAlex</a>
-    <a href="https://core.ac.uk/">CORE</a>
-    <a href="https://app.dimensions.ai/">Dimensions</a>
-    <a href="https://sci-hubtw.hkvisa.net/">Sci-Hub</a>
-    <a href="https://grok.com/">GROK</a>
-    <a href="https://scholar.google.com">Google Scholar</a>
-    <a href="https://arxiv.org">ArXiv</a>
-</div>
+        <!-- Power Cable Block -->
+        <section class="block" aria-labelledby="power-cable">
+            <p id="power-cable">Power Cable</p>
+            <hr>
+            <a href="https://www.trystar.com/" aria-label="Trystar Power Solutions">Trystar</a>
+            <a href="https://www.pittsburghwire.com/" aria-label="Pittsburgh Wire and Cable">Pittsburgh Wire</a>
+            <a href="https://www.southwire.com" aria-label="Southwire">Southwire</a>
+            <a href="https://windycitywire.com/" aria-label="Windy City Wire">WindyCity</a>
+        </section>
 
-<div class="block">
-    <p>BAS/DDC</p>
-    <hr>
-    <a href="https://www.ashrae.org/">ASHRAE</a>
-    <a href="https://www.tridium.com/">Tridium Niagara</a>
-    <a href="https://www.johnsoncontrols.com/">Johnson Controls</a>
-    <a href="https://www.siemens.com/global/en/products/buildings.html">Siemens Building Technologies</a>
-    <a href="https://buildings.honeywell.com/">Honeywell Building Solutions</a>
-    <a href="https://www.se.com/ww/en/work/solutions/for-business/building-management/">Schneider Electric EcoStruxure</a>
-    <a href="https://www.distech-controls.com/">Distech Controls</a>
-    <a href="https://controltrends.org/">ControlTrends</a>
-    <a href="https://www.smartbuildingsacademy.com/">Smart Buildings</a>
-    <a href="https://www.automatedbuildings.com">Automated Buildings</a>
-    <a href="https://www.bacnet.org">BACnet</a>
-</div>
+        <!-- Research Block -->
+        <section class="block" aria-labelledby="research">
+            <p id="research">Research</p>
+            <hr>
+            <a href="https://www.researchgate.net/" aria-label="ResearchGate">ResearchGate</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/" aria-label="PubMed">PubMed</a>
+            <a href="https://www.jstor.org/" aria-label="JSTOR">JSTOR</a>
+            <a href="https://www.semanticscholar.org/" aria-label="Semantic Scholar">Semantic Scholar</a>
+            <a href="https://www.zotero.org/" aria-label="Zotero Reference Manager">Zotero</a>
+            <a href="https://openalex.org/" aria-label="OpenAlex">OpenAlex</a>
+            <a href="https://core.ac.uk/" aria-label="CORE Open Access">CORE</a>
+            <a href="https://app.dimensions.ai/" aria-label="Dimensions Research Database">Dimensions</a>
+            <a href="https://sci-hubtw.hkvisa.net/" aria-label="Sci-Hub">Sci-Hub</a>
+            <a href="https://x.ai/grok" aria-label="Grok by xAI">Grok</a>
+            <a href="https://scholar.google.com" aria-label="Google Scholar">Google Scholar</a>
+            <a href="https://arxiv.org" aria-label="ArXiv Preprint Server">ArXiv</a>
+        </section>
 
-<div class="block">
-    <p>Credit</p>
-    <hr>
-    <a href="https://www.capitalone.com/">Capital One</a>
-    <a href="https://creditscorecard.com/">Discover Scorecard</a>
-    <a href="https://www.creditkarma.com/">Karma</a>
-    <a href="https://app.nav.com/home/">Nav</a>
-    <a href="https://card.discover.com/cardmembersvcs/achome/homepage/">Discover</a>
-    <a href="https://my.equifax.com/">Equifax</a>
-    <a href="https://membership.tui.transunion.com/">TransUnion</a>
-    <a href="https://www.experian.com">Experian</a>
-</div>
+        <!-- BAS/DDC Block -->
+        <section class="block" aria-labelledby="bas-ddc">
+            <p id="bas-ddc">BAS/DDC</p>
+            <hr>
+            <a href="https://www.ashrae.org/" aria-label="ASHRAE">ASHRAE</a>
+            <a href="https://www.tridium.com/" aria-label="Tridium Niagara">Tridium Niagara</a>
+            <a href="https://www.johnsoncontrols.com/" aria-label="Johnson Controls">Johnson Controls</a>
+            <a href="https://www.siemens.com/global/en/products/buildings.html" aria-label="Siemens Building Technologies">Siemens Building Technologies</a>
+            <a href="https://buildings.honeywell.com/" aria-label="Honeywell Building Solutions">Honeywell Building Solutions</a>
+            <a href="https://www.se.com/ww/en/work/solutions/for-business/building-management/" aria-label="Schneider Electric EcoStruxure">Schneider Electric EcoStruxure</a>
+            <a href="https://www.distech-controls.com/" aria-label="Distech Controls">Distech Controls</a>
+            <a href="https://controltrends.org/" aria-label="ControlTrends">ControlTrends</a>
+            <a href="https://www.smartbuildingsacademy.com/" aria-label="Smart Buildings Academy">Smart Buildings</a>
+            <a href="https://www.automatedbuildings.com" aria-label="Automated Buildings">Automated Buildings</a>
+            <a href="https://www.bacnet.org" aria-label="BACnet International">BACnet</a>
+        </section>
 
-<div class="block">
-    <p>Transformers</p>
-    <hr>
-    <a href="https://philipsbrothers.com/">Philips Brothers</a>
-    <a href="https://www.resapower.com/">RESA Power</a>
-    <a href="https://metapowersolutions.com/">Meta Power Solutions</a>
-    <a href="https://americas.hammondpowersolutions.com/">Hammond Power Solutions</a>
-    <a href="https://www.pacifictransformer.com/">Pacific Transformer</a>
-    <a href="https://www.triadmagnetics.com/">Triad Magnetics</a>
-    <a href="https://www.controlledmagnetics.com/">Controlled Magnetics</a>
-    <a href="https://transformersupply.com/">Transformer Supply</a>
-    <a href="https://www.sunbeltusa.com/">Sunbelt USA</a>
-    <a href="https://vantran.com/">VanTran</a>
-    <a href="https://www.eaton.com">Eaton</a>
-    <a href="https://www.maddoxtransformer.com">Maddox Transformers</a>
-</div>
+        <!-- Credit Block -->
+        <section class="block" aria-labelledby="credit">
+            <p id="credit">Credit</p>
+            <hr>
+            <a href="https://www.capitalone.com/" aria-label="Capital One">Capital One</a>
+            <a href="https://creditscorecard.com/" aria-label="Discover Credit Scorecard">Discover Scorecard</a>
+            <a href="https://www.creditkarma.com/" aria-label="Credit Karma">Karma</a>
+            <a href="https://app.nav.com/home/" aria-label="Nav Financial Health">Nav</a>
+            <a href="https://card.discover.com/cardmembersvcs/achome/homepage/" aria-label="Discover Card Services">Discover</a>
+            <a href="https://my.equifax.com/" aria-label="Equifax Credit Bureau">Equifax</a>
+            <a href="https://membership.tui.transunion.com/" aria-label="TransUnion Credit Bureau">TransUnion</a>
+            <a href="https://www.experian.com" aria-label="Experian Credit Bureau">Experian</a>
+        </section>
 
-<div class="block">
-    <p>Radio Conditions</p>
-    <hr>
-    <a href="https://www.hamqsl.com/solar.html">
-        <img src="https://www.hamqsl.com/solarbc.php" alt="Solar Radio Conditions Chart"></a>
-    <a href="https://www.spaceweather.com">SpaceWeather</a>
-</div>
+        <!-- Transformers Block -->
+        <section class="block" aria-labelledby="transformers">
+            <p id="transformers">Transformers</p>
+            <hr>
+            <a href="https://philipsbrothers.com/" aria-label="Philips Brothers Electrical Contractors">Philips Brothers</a>
+            <a href="https://www.resapower.com/" aria-label="RESA Power">RESA Power</a>
+            <a href="https://metapowersolutions.com/" aria-label="Meta Power Solutions">Meta Power Solutions</a>
+            <a href="https://americas.hammondpowersolutions.com/" aria-label="Hammond Power Solutions">Hammond Power Solutions</a>
+            <a href="https://www.pacifictransformer.com/" aria-label="Pacific Transformer">Pacific Transformer</a>
+            <a href="https://www.triadmagnetics.com/" aria-label="Triad Magnetics">Triad Magnetics</a>
+            <a href="https://www.controlledmagnetics.com/" aria-label="Controlled Magnetics">Controlled Magnetics</a>
+            <a href="https://transformersupply.com/" aria-label="Transformer Supply">Transformer Supply</a>
+            <a href="https://www.sunbeltusa.com/" aria-label="Sunbelt Transformer">Sunbelt USA</a>
+            <a href="https://vantran.com/" aria-label="VanTran Transformers">VanTran</a>
+            <a href="https://www.eaton.com" aria-label="Eaton Corporation">Eaton</a>
+            <a href="https://www.maddoxtransformer.com" aria-label="Maddox Transformers">Maddox Transformers</a>
+        </section>
 
-<div class="block">
-    <p>Health</p>
-    <hr>
-    <a href="https://8042-1.portal.athenahealth.com/">Athena</a>
-    <a href="https://login.patientfusion.com/">Fusion</a>
-    <a href="https://www.webmd.com">WebMD</a>
-    <a href="https://www.mayoclinic.org">Mayo Clinic</a>
-</div>
-</div>
+        <!-- Radio Conditions Block -->
+        <section class="block" aria-labelledby="radio-conditions">
+            <p id="radio-conditions">Radio Conditions</p>
+            <hr>
+            <a href="https://www.hamqsl.com/solar.html" aria-label="HamQSL Solar Radio Conditions Chart">
+                <img src="https://www.hamqsl.com/solarbc.php" alt="Solar Radio Conditions Chart" loading="lazy">
+            </a>
+            <a href="https://www.spaceweather.com" aria-label="SpaceWeather">SpaceWeather</a>
+        </section>
+
+        <!-- Health Block -->
+        <section class="block" aria-labelledby="health">
+            <p id="health">Health</p>
+            <hr>
+            <a href="https://8042-1.portal.athenahealth.com/" aria-label="Athenahealth Patient Portal">Athena</a>
+            <a href="https://login.patientfusion.com/" aria-label="Patient Fusion Portal">Fusion</a>
+            <a href="https://www.webmd.com" aria-label="WebMD Health Information">WebMD</a>
+            <a href="https://www.mayoclinic.org" aria-label="Mayo Clinic Health Resources">Mayo Clinic</a>
+        </section>
+    </div>
 </body>
 </html>
-
