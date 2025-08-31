@@ -4,97 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A curated collection of resources for technology, weather, load banks, 3D printing, electrical parts, power cables, research, building automation, credit, transformers, radio conditions, health, news, bills, social media, and business.">
+    <meta name="description" content="A curated collection of resources for technology, weather, load banks, 3D printing, electrical parts, power cables, research, building automation, credit, transformers, radio conditions, health, news, bills, social media, business, radio, firearms, farming, and more.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
     <title>Welcome Home</title>
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+        body { 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Ubuntu', sans-serif; 
+            background: url("Equinix_Data_Center.webp") no-repeat center center fixed; 
+            background-size: cover; 
+            color: #ffffff; 
+            min-height: 100vh; 
         }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Ubuntu', sans-serif;
-            background: url("Equinix_Data_Center.webp") no-repeat center center fixed;
-            background-size: cover;
-            color: #ffffff;
-            min-height: 100vh;
+        .container { 
+            column-width: 160px; 
+            column-gap: 10px; 
+            padding: 20px; 
+            max-width: 1280px; 
+            margin: 0 auto; 
         }
-
-        .container {
-            column-width: 160px;
-            column-gap: 10px;
-            padding: 20px;
-            max-width: 1280px;
-            margin: 0 auto;
+        .block { 
+            background-color: rgba(0, 0, 0, 0.7); 
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: center; 
+            width: 160px; 
+            box-sizing: border-box; 
+            break-inside: avoid; 
+            margin-bottom: 10px; 
         }
-
-        .block {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 160px;
-            box-sizing: border-box;
-            break-inside: avoid;
-            margin-bottom: 10px;
+        .block p { 
+            margin: 10px 0; 
+            font-weight: 700; 
+            font-size: 1.1rem; 
         }
-
-        .block p {
-            margin: 10px 0;
-            font-weight: 700;
-            font-size: 1.1rem;
+        .block hr { 
+            border: 0; 
+            border-top: 1px solid #ffffff; 
+            margin: 10px 0; 
         }
-
-        .block hr {
-            border: 0;
-            border-top: 1px solid #ffffff;
-            margin: 10px 0;
+        a { 
+            text-decoration: none; 
+            color: #ffffff; 
+            font-size: 0.85rem; 
+            display: block; 
+            margin: 3px 0; 
+            padding: 3px; 
+            transition: background-color 0.3s, color 0.3s; 
+            border-radius: 3px; 
+            white-space: nowrap; 
+            overflow: hidden; 
+            text-overflow: ellipsis; 
         }
-
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 0.85rem;
-            display: block;
-            margin: 3px 0;
-            padding: 3px;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 3px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        a:hover, a:focus { 
+            background-color: #88ace0; 
+            color: #0047ab; 
+            outline: 2px solid #ffffff; 
         }
-
-        a:hover, a:focus {
-            background-color: #88ace0;
-            color: #0047ab;
-            outline: 2px solid #ffffff;
+        img { 
+            max-width: 100%; 
+            border-radius: 5px; 
         }
-
-        img {
-            max-width: 100%;
-            border-radius: 5px;
+        @media (max-width: 768px) { 
+            .container { 
+                column-count: 1; 
+                padding: 10px; 
+            } 
+            .block { 
+                width: 90%; 
+                margin: 10px auto; 
+            } 
         }
-
-        @media (max-width: 768px) {
-            .container {
-                column-count: 1;
-                padding: 10px;
-            }
-
-            .block {
-                width: 90%;
-                margin: 10px auto;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            .container {
-                column-count: 7;
-            }
+        @media (min-width: 1200px) { 
+            .container { 
+                column-count: 7; 
+            } 
         }
     </style>
 </head>
@@ -114,7 +101,7 @@
             <a href="https://www.feedly.com" aria-label="Feedly News Aggregator">Feedly</a>
             <a href="https://www.whatfinger.com/" aria-label="Whatfinger News">Whatfinger</a>
             <a href="https://thelibertydaily.com/" aria-label="The Liberty Daily">Liberty Daily</a>
-            <a href="https://www.americanthinker.com/" aria-label="American Thinker">Thinker</a>
+            <a href="https://www.americanthinker.com/" aria-label="American Thinker">American Thinker</a>
             <a href="https://www.washingtonexaminer.com/" aria-label="Washington Examiner">Examiner</a>
             <a href="https://bonginoreport.com/" aria-label="Bongino Report">Bongino</a>
             <a href="https://thenewamerican.com/" aria-label="The New American">New American</a>
@@ -124,7 +111,6 @@
             <a href="https://www.reuters.com" aria-label="Reuters News">Reuters</a>
             <a href="https://www.newsmax.com" aria-label="Newsmax">Newsmax</a>
         </section>
-
         <!-- Electrical Block -->
         <section class="block" aria-labelledby="electrical">
             <p id="electrical">Electrical</p>
@@ -152,7 +138,7 @@
             <a href="https://www.solarpowerworldonline.com/" aria-label="Solar Power World">Solar Power World</a>
             <a href="https://www.hydroreview.com/" aria-label="Hydro Review">Hydro Review</a>
         </section>
-
+        <!-- Computers Block -->
         <section class="block" aria-labelledby="computers">
             <p id="computers">Computers</p>
             <hr>
@@ -172,7 +158,6 @@
             <a href="https://www.darkreading.com/" aria-label="Dark Reading">Dark Reading</a>
             <a href="https://www.phoronix.com/" aria-label="Phoronix">Phoronix</a>
         </section>
-
         <!-- Bills Block -->
         <section class="block" aria-labelledby="bills">
             <p id="bills">Bills</p>
@@ -185,7 +170,6 @@
             <a href="https://auth.proofing.statefarm.com/login-ui/login/" aria-label="State Farm Auto Insurance">Auto Insurance</a>
             <a href="https://www.mint.com" aria-label="Mint Personal Finance">Mint</a>
         </section>
-
         <!-- Social Media Block -->
         <section class="block" aria-labelledby="social-media">
             <p id="social-media">Social Media</p>
@@ -200,7 +184,6 @@
             <a href="https://rumble.com" aria-label="Rumble">Rumble</a>
             <a href="https://truthsocial.com" aria-label="Truth Social">Truth Social</a>
         </section>
-
         <!-- Business Block -->
         <section class="block" aria-labelledby="business">
             <p id="business">Business</p>
@@ -217,7 +200,6 @@
             <a href="https://www.entrepreneur.com" aria-label="Entrepreneur Magazine">Entrepreneur</a>
             <a href="https://moz.com" aria-label="Moz SEO Tools">Moz</a>
         </section>
-
         <!-- Credit Block -->
         <section class="block" aria-labelledby="credit">
             <p id="credit">Credit</p>
@@ -231,7 +213,6 @@
             <a href="https://membership.tui.transunion.com/" aria-label="TransUnion Credit Bureau">TransUnion</a>
             <a href="https://www.experian.com" aria-label="Experian Credit Bureau">Experian</a>
         </section>
-
         <!-- Tech Block -->
         <section class="block" aria-labelledby="tech">
             <p id="tech">Tech</p>
@@ -250,7 +231,6 @@
             <a href="https://stackoverflow.com" aria-label="Stack Overflow">Stack Overflow</a>
             <a href="https://www.theverge.com" aria-label="The Verge">The Verge</a>
         </section>
-
         <!-- Weather Block -->
         <section class="block" aria-labelledby="weather">
             <p id="weather">Weather</p>
@@ -270,7 +250,6 @@
             <a href="https://www.weatherbit.io/" aria-label="WeatherBit">WeatherBit</a>
             <a href="https://www.tomorrow.io/" aria-label="Tomorrow.io (ClimaCell)">ClimaCell</a>
         </section>
-
         <!-- Loadbank Rentals Block -->
         <section class="block" aria-labelledby="loadbank-rentals">
             <p id="loadbank-rentals">Loadbank Rentals</p>
@@ -289,7 +268,6 @@
             <a href="https://www.cat.com/en_US/products/new/rental.html" aria-label="Caterpillar Rental Solutions">Caterpillar</a>
             <a href="https://www.jovalindustrial.com" aria-label="Joval Industrial">Joval Industrial</a>
         </section>
-
         <!-- Loadbank Builders Block -->
         <section class="block" aria-labelledby="loadbank-builders">
             <p id="loadbank-builders">Loadbank Builders</p>
@@ -303,7 +281,6 @@
             <a href="https://www.simplexdirect.com/" aria-label="Simplex Load Banks">Simplex</a>
             <a href="https://www.gilbertelectricalsystems.com/" aria-label="Gilbert Electrical Systems">Gilbert/Elgin</a>
         </section>
-
         <!-- Power Cable Block -->
         <section class="block" aria-labelledby="power-cable">
             <p id="power-cable">Power Cable</p>
@@ -312,8 +289,8 @@
             <a href="https://www.pittsburghwire.com/" aria-label="Pittsburgh Wire and Cable">Pittsburgh Wire</a>
             <a href="https://www.southwire.com" aria-label="Southwire">Southwire</a>
             <a href="https://windycitywire.com/" aria-label="Windy City Wire">WindyCity</a>
+            <a href="https://www.rackmountpdu.com/" aria-label="Rackmount PDU Power Cords">Rackmount PDU</a>
         </section>
-
         <!-- 3D Printing Block -->
         <section class="block" aria-labelledby="3d-printing">
             <p id="3d-printing">3D Printing</p>
@@ -321,15 +298,15 @@
             <a href="https://3dprintingindustry.com/" aria-label="3D Printing Industry News">3D Printing Industry</a>
             <a href="https://coex3d.com/" aria-label="COEX 3D Printing">COEX</a>
             <a href="https://www.pushplastic.com/" aria-label="Push Plastic 3D Printing Filaments">Push Plastic</a>
-            <a href="https://www.mosaicmfg Ministries.com/" aria-label="Mosaic Manufacturing">Mosaic</a>
-            <a href="https://www.3dxtech.com/" aria-label="3DXTech 3D Printing Materials">3DX Tech</a>
+            <a href="https://www.mosaicmfg.com/" aria-label="Mosaic Manufacturing">Mosaic</a>
+            <a href="https://www.3dxtech.com/" aria-label="3DXTech 3D Printing Materials">3DXTech</a>
             <a href="https://vorondesign.com/" aria-label="VORON 3D Printer Designs">VORON</a>
             <a href="https://www.3dfuel.com/" aria-label="3D Fuel Filaments">3D Fuel</a>
             <a href="https://www.prusa3d.com" aria-label="Prusa Research 3D Printers">Prusa Research</a>
             <a href="https://all3dp.com" aria-label="All3DP 3D Printing Resources">All3DP</a>
             <a href="https://us.polymaker.com" aria-label="Polymaker 3D Printing Materials">Polymaker</a>
+            <a href="https://www.thingiverse.com/" aria-label="Thingiverse 3D Models">Thingiverse</a>
         </section>
-
         <!-- Electrical Parts Block -->
         <section class="block" aria-labelledby="electrical-parts">
             <p id="electrical-parts">Electrical Parts</p>
@@ -349,10 +326,10 @@
             <a href="https://www.tme.com/" aria-label="TME Electronic Components">TME</a>
             <a href="https://www.rs-online.com/" aria-label="RS Components">RS Components</a>
             <a href="https://www.te.com/" aria-label="TE Connectivity">TE Connectivity</a>
-            <a href="https://www.sparkfun.com/" aria-label="SparkFun Electronics">SparkFun Electronics</a>
+            <a href="https://www.sparkfun.com/" aria-label="SparkFun Electronics">SparkFun</a>
             <a href="https://www.avnet.com/" aria-label="Avnet Electronics">Avnet</a>
+            <a href="https://www.mcmaster.com/" aria-label="McMaster-Carr Supplies">McMaster-Carr</a>
         </section>
-        
         <!-- Research Block -->
         <section class="block" aria-labelledby="research">
             <p id="research">Research</p>
@@ -370,7 +347,6 @@
             <a href="https://scholar.google.com" aria-label="Google Scholar">Google Scholar</a>
             <a href="https://arxiv.org" aria-label="ArXiv Preprint Server">ArXiv</a>
         </section>
-
         <!-- BAS/DDC Block -->
         <section class="block" aria-labelledby="bas-ddc">
             <p id="bas-ddc">BAS/DDC</p>
@@ -387,7 +363,6 @@
             <a href="https://www.automatedbuildings.com" aria-label="Automated Buildings">Automated Buildings</a>
             <a href="https://www.bacnet.org" aria-label="BACnet International">BACnet</a>
         </section>
-
         <!-- Transformers Block -->
         <section class="block" aria-labelledby="transformers">
             <p id="transformers">Transformers</p>
@@ -405,7 +380,6 @@
             <a href="https://www.eaton.com" aria-label="Eaton Corporation">Eaton</a>
             <a href="https://www.maddoxtransformer.com" aria-label="Maddox Transformers">Maddox Transformers</a>
         </section>
-
         <!-- Radio Conditions Block -->
         <section class="block" aria-labelledby="radio-conditions">
             <p id="radio-conditions">Radio Conditions</p>
@@ -414,8 +388,8 @@
                 <img src="https://www.hamqsl.com/solarbc.php" alt="Solar Radio Conditions Chart" loading="lazy">
             </a>
             <a href="https://www.spaceweather.com" aria-label="SpaceWeather">SpaceWeather</a>
+            <a href="https://www.solarham.com/" aria-label="SolarHam Space Weather">SolarHam</a>
         </section>
-
         <!-- Health Block -->
         <section class="block" aria-labelledby="health">
             <p id="health">Health</p>
@@ -425,8 +399,7 @@
             <a href="https://www.webmd.com" aria-label="WebMD Health Information">WebMD</a>
             <a href="https://www.mayoclinic.org" aria-label="Mayo Clinic Health Resources">Mayo Clinic</a>
         </section>
-
-        <!--Linux Block-->
+        <!-- Linux Block -->
         <section class="block" aria-labelledby="linux">
             <p id="linux">Linux</p>
             <hr>
@@ -448,9 +421,12 @@
             <a href="https://www.linuxinsider.com/" aria-label="LinuxInsider">LinuxInsider</a>
             <a href="https://www.tecmint.com/" aria-label="TecMint">TecMint</a>
             <a href="https://lwn.net/" aria-label="LWN.net">LWN.net</a>
+            <a href="https://dietpi.com/" aria-label="DietPi Lightweight Linux">DietPi</a>
+            <a href="https://www.unetbootin.github.io/" aria-label="UNetbootin Bootable USB Creator">UNetbootin</a>
+            <a href="https://www.system-rescue.org/" aria-label="SystemRescueCd">SystemRescueCd</a>
+            <a href="https://veracrypt.fr/en/Home.html" aria-label="VeraCrypt Disk Encryption">VeraCrypt</a>
         </section>
-
-        <!-- Networking Section -->
+        <!-- Networking Block -->
         <section class="block" aria-labelledby="networking">
             <p id="networking">Networking</p>
             <hr>
@@ -463,8 +439,7 @@
             <a href="https://www.onvif.org/" aria-label="ONVIF Network Video Standards">ONVIF</a>
             <a href="https://modbus.org/" aria-label="Modbus Industrial Protocol">Modbus</a>
         </section>
-
-        <!-- Energy Storage Section -->
+        <!-- Energy Storage Block -->
         <section class="block" aria-labelledby="energy-storage">
             <p id="energy-storage">Energy Storage</p>
             <hr>
@@ -476,9 +451,9 @@
             <a href="https://www.energy-storage.org/" aria-label="Energy Storage Association">Energy Storage Association</a>
             <a href="https://www.lgessbattery.com/" aria-label="LG Energy Solution">LG Energy Solution</a>
             <a href="https://www.sandia.gov/ess/" aria-label="Sandia National Laboratories Energy Storage">Sandia Labs</a>
+            <a href="https://www.battlebornbatteries.com/" aria-label="Battle Born Batteries">Battle Born Batteries</a>
         </section>
-
-        <!-- IoT and Smart Devices Section -->
+        <!-- IoT and Smart Devices Block -->
         <section class="block" aria-labelledby="iot-smart-devices">
             <p id="iot-smart-devices">IoT and Smart Devices</p>
             <hr>
@@ -490,9 +465,9 @@
             <a href="https://ifttt.com/" aria-label="IFTTT IoT Automation">IFTTT</a>
             <a href="https://www.particle.io/" aria-label="Particle IoT Platform">Particle</a>
             <a href="https://www.tuya.com/" aria-label="Tuya IoT Cloud Platform">Tuya</a>
+            <a href="https://store.ncd.io/" aria-label="NCD IoT Relay Shields">NCD IoT</a>
         </section>
-
-        <!-- Cybersecurity Section -->
+        <!-- Cybersecurity Block -->
         <section class="block" aria-labelledby="cybersecurity">
             <p id="cybersecurity">Cybersecurity</p>
             <hr>
@@ -505,8 +480,7 @@
             <a href="https://www.darkreading.com/" aria-label="Dark Reading">Dark Reading</a>
             <a href="https://www.securityweek.com/" aria-label="SecurityWeek">SecurityWeek</a>
         </section>
-
-        <!-- Renewable Energy Section -->
+        <!-- Renewable Energy Block -->
         <section class="block" aria-labelledby="renewable-energy">
             <p id="renewable-energy">Renewable Energy</p>
             <hr>
@@ -519,161 +493,238 @@
             <a href="https://www.pv-magazine.com/" aria-label="PV Magazine">PV Magazine</a>
             <a href="https://www.greentechmedia.com" aria-label="Greentech Media">Greentech Media</a>
         </section>
-
-        <!-- Power Generation Section -->
-<section class="block" aria-labelledby="power-generation">
-    <p id="power-generation">Power Generation</p>
-    <hr>
-    <a href="https://www.cummins.com/" aria-label="Cummins Generators">Cummins</a>
-    <a href="https://www.generac.com/" aria-label="Generac Power Solutions">Generac</a>
-    <a href="https://www.powerengineeringint.com/" aria-label="Power Engineering International">Power Engineering Int.</a>
-    <a href="https://www.cat.com/en_US/by-industry/electric-power.html" aria-label="Caterpillar Energy Solutions">Caterpillar</a>
-    <a href="https://www.ieee-pes.org/" aria-label="IEEE Power and Energy Society">IEEE Power & Energy</a>
-    <a href="https://www.dieselprogress.com/" aria-label="Diesel Progress">Diesel Progress</a>
-    <a href="https://www.kohlerpower.com/" aria-label="Kohler Power Systems">Kohler Power</a>
-    <a href="https://www.mtu-solutions.com/" aria-label="MTU Power Solutions">MTU Solutions</a>
-</section>
-
-<!-- Robotics and Automation Section -->
-<section class="block" aria-labelledby="robotics-automation">
-    <p id="robotics-automation">Robotics and Automation</p>
-    <hr>
-    <a href="https://www.roboticsbusinessreview.com/" aria-label="Robotics Business Review">Robotics Business</a>
-    <a href="https://www.ros.org/" aria-label="Robot Operating System">ROS</a>
-    <a href="https://www.fanucamerica.com/" aria-label="Fanuc Industrial Robotics">Fanuc</a>
-    <a href="https://new.abb.com/products/robotics" aria-label="ABB Robotics">ABB Robotics</a>
-    <a href="https://www.ieee-ras.org/" aria-label="IEEE Robotics and Automation Society">IEEE Robotics</a>
-    <a href="https://www.universal-robots.com/" aria-label="Universal Robots">Universal Robots</a>
-    <a href="https://www.therobotreport.com/" aria-label="The Robot Report">Robot Report</a>
-    <a href="https://www.yaskawa.com/" aria-label="Yaskawa Motoman Robotics">Yaskawa Motoman</a>
-</section>
-
-<!-- Data Centers Section -->
-<section class="block" aria-labelledby="data-centers">
-    <p id="data-centers">Data Centers</p>
-    <hr>
-    <a href="https://www.uptimeinstitute.com/" aria-label="Uptime Institute Data Center Standards">Uptime Institute</a>
-    <a href="https://www.datacenterdynamics.com/" aria-label="Data Center Dynamics">DCD</a>
-    <a href="https://www.se.com/us/en/work/solutions/data-centers/" aria-label="Schneider Electric Data Centers">Schneider Electric</a>
-    <a href="https://www.vertiv.com/" aria-label="Vertiv Data Center Infrastructure">Vertiv</a>
-    <a href="https://www.afcom.com/" aria-label="AFCOM Data Center Professionals">AFCOM</a>
-    <a href="https://www.greendatacenternews.org/" aria-label="Green Data Center News">Green Data Center</a>
-    <a href="https://tc99.ashrae.org/" aria-label="ASHRAE TC 9.9 Data Center Cooling">ASHRAE TC 9.9</a>
-    <a href="https://www.datacenterknowledge.com/" aria-label="DataCenter Knowledge">DataCenter Knowledge</a>
-</section>
-
-<!-- Embedded Systems Section -->
-<section class="block" aria-labelledby="embedded-systems">
-    <p id="embedded-systems">Embedded Systems</p>
-    <hr>
-    <a href="https://www.embedded.com/" aria-label="Embedded.com News">Embedded.com</a>
-    <a href="https://www.adafruit.com/" aria-label="Adafruit Embedded Hardware">Adafruit</a>
-    <a href="https://www.microchip.com/" aria-label="Microchip Technology">Microchip</a>
-    <a href="https://www.st.com/content/st_com/en/ecosystems/stm32.html" aria-label="STM32 Microcontrollers">STM32</a>
-    <a href="https://www.embeddedsystemsworld.com/" aria-label="Embedded Systems World">Embedded Systems</a>
-    <a href="https://www.arduino.cc/" aria-label="Arduino Official Site">Arduino</a>
-    <a href="https://www.raspberrypi.org/" aria-label="Raspberry Pi Foundation">Raspberry Pi</a>
-    <a href="https://www.digikey.com/en/resources/embedded" aria-label="DigiKey Embedded Solutions">DigiKey Embedded</a>
-</section>
-
-<!-- Standards and Certifications Section -->
-<section class="block" aria-labelledby="standards-certifications">
-    <p id="standards-certifications">Standards and Certifications</p>
-    <hr>
-    <a href="https://standards.ieee.org/" aria-label="IEEE Standards Association">IEEE Standards</a>
-    <a href="https://www.ansi.org/" aria-label="American National Standards Institute">ANSI</a>
-    <a href="https://www.ul.com/" aria-label="UL Solutions Safety Certifications">UL Solutions</a>
-    <a href="https://www.iec.ch/" aria-label="International Electrotechnical Commission">IEC</a>
-    <a href="https://www.nema.org/" aria-label="National Electrical Manufacturers Association">NEMA</a>
-    <a href="https://www.ashrae.org/technical-resources/standards-and-guidelines" aria-label="ASHRAE Standards">ASHRAE Standards</a>
-    <a href="https://www.bacnetinternational.org/" aria-label="BACnet International">BACnet</a>
-    <a href="https://www.iso.org/standardization.html" aria-label="ISO/IEC Standards">ISO/IEC</a>
-</section>
-
-<!-- Firearms Section -->
-<section class="block" aria-labelledby="firearms">
-    <p id="firearms">Firearms</p>
-    <hr>
-    <a href="https://www.nra.org/" aria-label="National Rifle Association">NRA</a>
-    <a href="https://www.guns.com/" aria-label="Guns.com Firearms News">Guns.com</a>
-    <a href="https://www.thetruthaboutguns.com/" aria-label="The Truth About Guns">Truth About Guns</a>
-    <a href="https://www.ar15.com/" aria-label="AR15.com Forums">AR15.com</a>
-    <a href="https://www.gunsmithing.com/" aria-label="American Gunsmithing Institute">AGI</a>
-    <a href="https://www.brownells.com/" aria-label="Brownells Firearms Parts">Brownells</a>
-    <a href="https://www.midwayusa.com/" aria-label="MidwayUSA Firearms Supplies">MidwayUSA</a>
-    <a href="https://gunrights.org/" aria-label="National Association for Gun Rights">NAGR</a>
-    <a href="https://www.gunowners.org/" aria-label="Gun Owners of America">GOA</a>
-</section>
-
-<!-- Home Built Aircraft Section -->
-<section class="block" aria-labelledby="home-built-aircraft">
-    <p id="home-built-aircraft">Home Built Aircraft</p>
-    <hr>
-    <a href="https://www.eaa.org/" aria-label="Experimental Aircraft Association">EAA</a>
-    <a href="https://www.kitplanes.com/" aria-label="Kitplanes Magazine">Kitplanes</a>
-    <a href="https://www.vansaircraft.com/" aria-label="Van's Aircraft Kits">Van’s Aircraft</a>
-    <a href="https://www.zenith.aero/" aria-label="Zenith Aircraft Company">Zenith Aircraft</a>
-    <a href="https://www.rutanaircraft.com/" aria-label="Rutan Aircraft Designs">Rutan Aircraft</a>
-    <a href="https://www.homebuiltairplanes.com/" aria-label="Homebuilt Airplanes Forum">Homebuilt Airplanes</a>
-    <a href="https://www.faa.gov/aircraft/gen_av/kit_aircraft/" aria-label="FAA Kit Aircraft Regulations">FAA Kit Aircraft</a>
-    <a href="https://www.pietenpol.org/" aria-label="Pietenpol Aircraft Plans">Pietenpol</a>
-</section>
-
-<!-- Pole Barns Section -->
-<section class="block" aria-labelledby="pole-barns">
-    <p id="pole-barns">Pole Barns</p>
-    <hr>
-    <a href="https://www.hansenpolebuildings.com/" aria-label="Hansen Pole Buildings">Hansen Pole Buildings</a>
-    <a href="https://www.dcstructures.com/" aria-label="DC Structures Pole Barn Kits">DC Structures</a>
-    <a href="https://www.yankeebarnhomes.com/" aria-label="Yankee Barn Homes">Yankee Barn Homes</a>
-    <a href="https://www.barndominiumlife.com/" aria-label="Barndominium Life">Barndominium Life</a>
-    <a href="https://www.metalbuildinghomes.org/" aria-label="Metal Building Homes">Metal Building Homes</a>
-    <a href="https://www.buildinggreen.com/" aria-label="BuildingGreen Sustainable Construction">BuildingGreen</a>
-    <a href="https://www.nationwidebarns.com/" aria-label="Nationwide Barns">Nationwide Barns</a>
-    <a href="https://www.postframeadvantage.com/" aria-label="Post-Frame Advantage">Post-Frame Advantage</a>
-</section>
-
-<!-- CB Radios Section -->
-<section class="block" aria-labelledby="cb-radios">
-    <p id="cb-radios">CB Radios</p>
-    <hr>
-    <a href="https://www.wearecb.com/" aria-label="CB World Radios and Antennas">CB World</a>
-    <a href="https://www.cbworldinformer.com/" aria-label="CB World Informer">CB World Informer</a>
-    <a href="https://www.cobra.com/" aria-label="Cobra Electronics CB Radios">Cobra</a>
-    <a href="https://www.midlandusa.com/" aria-label="Midland CB Radios">Midland</a>
-    <a href="https://www.rightchannelradios.com/" aria-label="Right Channel Radios">Right Channel Radios</a>
-    <a href="https://www.poweroutageready.com/" aria-label="Power Outage Ready CB Guide">Power Outage Ready</a>
-    <a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/citizens-band-radio-service-cb" aria-label="FCC Citizens Band Radio Service">FCC CB Service</a>
-    <a href="https://www.dxzone.com/catalog/Radio_Equipment/CB_Radios/" aria-label="DXZone CB Radio Resources">DXZone</a>
-</section>
-
-<!-- 7.3 Diesel Trucks Section -->
-<section class="block" aria-labelledby="diesel-trucks">
-    <p id="diesel-trucks">7.3 Diesel Trucks</p>
-    <hr>
-    <a href="https://www.powerstrokenation.com/" aria-label="Power Stroke Nation Forums">Power Stroke Nation</a>
-    <a href="https://www.ford-trucks.com/" aria-label="Ford Trucks Forums">Ford Trucks</a>
-    <a href="https://www.dieselhub.com/" aria-label="Diesel Hub 7.3 Power Stroke">Diesel Hub</a>
-    <a href="https://www.thedieselstop.com/" aria-label="The Diesel Stop">The Diesel Stop</a>
-    <a href="https://www.dieselpowerproducts.com/" aria-label="Diesel Power Products">Diesel Power Products</a>
-    <a href="https://www.powerstroke.org/" aria-label="PowerStroke.org">PowerStroke.org</a>
-    <a href="https://www.sinisterdiesel.com/" aria-label="Sinister Diesel Performance">Sinister Diesel</a>
-    <a href="https://www.ford.com/support/vehicle/parts/service/engines/powerstroke-diesel/" aria-label="Ford Power Stroke Support">Ford Diesel</a>
-</section>
-
-<!-- Machining for Home Section -->
-<section class="block" aria-labelledby="machining-home">
-    <p id="machining-home">Machining for Home</p>
-    <hr>
-    <a href="https://www.practicalmachinist.com/" aria-label="Practical Machinist Forums">Practical Machinist</a>
-    <a href="https://www.cnccookbook.com/" aria-label="CNC Cookbook">CNC Cookbook</a>
-    <a href="https://www.homeshopmachinist.net/" aria-label="Home Shop Machinist">Home Shop Machinist</a>
-    <a href="https://www.mcmaster.com/" aria-label="McMaster-Carr Supplies">McMaster-Carr</a>
-    <a href="https://www.grizzly.com/" aria-label="Grizzly Industrial Tools">Grizzly Industrial</a>
-    <a href="https://www.littlemachineshop.com/" aria-label="Little Machine Shop">Little Machine Shop</a>
-    <a href="https://www.haascnc.com/" aria-label="Haas Automation CNC Machines">Haas Automation</a>
-    <a href="https://www.tormach.com/" aria-label="Tormach CNC Machines">Tormach</a>
-</section>
-</div>
+        <!-- Power Generation Block -->
+        <section class="block" aria-labelledby="power-generation">
+            <p id="power-generation">Power Generation</p>
+            <hr>
+            <a href="https://www.cummins.com/" aria-label="Cummins Generators">Cummins</a>
+            <a href="https://www.generac.com/" aria-label="Generac Power Solutions">Generac</a>
+            <a href="https://www.powerengineeringint.com/" aria-label="Power Engineering International">Power Engineering Int.</a>
+            <a href="https://www.cat.com/en_US/by-industry/electric-power.html" aria-label="Caterpillar Energy Solutions">Caterpillar</a>
+            <a href="https://www.ieee-pes.org/" aria-label="IEEE Power and Energy Society">IEEE Power & Energy</a>
+            <a href="https://www.dieselprogress.com/" aria-label="Diesel Progress">Diesel Progress</a>
+            <a href="https://www.kohlerpower.com/" aria-label="Kohler Power Systems">Kohler Power</a>
+            <a href="https://www.mtu-solutions.com/" aria-label="MTU Power Solutions">MTU Solutions</a>
+        </section>
+        <!-- Robotics and Automation Block -->
+        <section class="block" aria-labelledby="robotics-automation">
+            <p id="robotics-automation">Robotics and Automation</p>
+            <hr>
+            <a href="https://www.roboticsbusinessreview.com/" aria-label="Robotics Business Review">Robotics Business</a>
+            <a href="https://www.ros.org/" aria-label="Robot Operating System">ROS</a>
+            <a href="https://www.fanucamerica.com/" aria-label="Fanuc Industrial Robotics">Fanuc</a>
+            <a href="https://new.abb.com/products/robotics" aria-label="ABB Robotics">ABB Robotics</a>
+            <a href="https://www.ieee-ras.org/" aria-label="IEEE Robotics and Automation Society">IEEE Robotics</a>
+            <a href="https://www.universal-robots.com/" aria-label="Universal Robots">Universal Robots</a>
+            <a href="https://www.therobotreport.com/" aria-label="The Robot Report">Robot Report</a>
+            <a href="https://www.yaskawa.com/" aria-label="Yaskawa Motoman Robotics">Yaskawa Motoman</a>
+        </section>
+        <!-- Data Centers Block -->
+        <section class="block" aria-labelledby="data-centers">
+            <p id="data-centers">Data Centers</p>
+            <hr>
+            <a href="https://www.uptimeinstitute.com/" aria-label="Uptime Institute Data Center Standards">Uptime Institute</a>
+            <a href="https://www.datacenterdynamics.com/" aria-label="Data Center Dynamics">DCD</a>
+            <a href="https://www.se.com/us/en/work/solutions/data-centers/" aria-label="Schneider Electric Data Centers">Schneider Electric</a>
+            <a href="https://www.vertiv.com/" aria-label="Vertiv Data Center Infrastructure">Vertiv</a>
+            <a href="https://www.afcom.com/" aria-label="AFCOM Data Center Professionals">AFCOM</a>
+            <a href="https://www.greendatacenternews.org/" aria-label="Green Data Center News">Green Data Center</a>
+            <a href="https://tc99.ashrae.org/" aria-label="ASHRAE TC 9.9 Data Center Cooling">ASHRAE TC 9.9</a>
+            <a href="https://www.datacenterknowledge.com/" aria-label="DataCenter Knowledge">DataCenter Knowledge</a>
+        </section>
+        <!-- Embedded Systems Block -->
+        <section class="block" aria-labelledby="embedded-systems">
+            <p id="embedded-systems">Embedded Systems</p>
+            <hr>
+            <a href="https://www.embedded.com/" aria-label="Embedded.com News">Embedded.com</a>
+            <a href="https://www.adafruit.com/" aria-label="Adafruit Embedded Hardware">Adafruit</a>
+            <a href="https://www.microchip.com/" aria-label="Microchip Technology">Microchip</a>
+            <a href="https://www.st.com/content/st_com/en/ecosystems/stm32.html" aria-label="STM32 Microcontrollers">STM32</a>
+            <a href="https://www.embeddedsystemsworld.com/" aria-label="Embedded Systems World">Embedded Systems</a>
+            <a href="https://www.arduino.cc/" aria-label="Arduino Official Site">Arduino</a>
+            <a href="https://www.raspberrypi.org/" aria-label="Raspberry Pi Foundation">Raspberry Pi</a>
+            <a href="https://www.digikey.com/en/resources/embedded" aria-label="DigiKey Embedded Solutions">DigiKey Embedded</a>
+        </section>
+        <!-- Standards and Certifications Block -->
+        <section class="block" aria-labelledby="standards-certifications">
+            <p id="standards-certifications">Standards and Certifications</p>
+            <hr>
+            <a href="https://standards.ieee.org/" aria-label="IEEE Standards Association">IEEE Standards</a>
+            <a href="https://www.ansi.org/" aria-label="American National Standards Institute">ANSI</a>
+            <a href="https://www.ul.com/" aria-label="UL Solutions Safety Certifications">UL Solutions</a>
+            <a href="https://www.iec.ch/" aria-label="International Electrotechnical Commission">IEC</a>
+            <a href="https://www.nema.org/" aria-label="National Electrical Manufacturers Association">NEMA</a>
+            <a href="https://www.ashrae.org/technical-resources/standards-and-guidelines" aria-label="ASHRAE Standards">ASHRAE Standards</a>
+            <a href="https://www.bacnetinternational.org/" aria-label="BACnet International">BACnet</a>
+            <a href="https://www.iso.org/standardization.html" aria-label="ISO/IEC Standards">ISO/IEC</a>
+        </section>
+        <!-- Firearms Block -->
+        <section class="block" aria-labelledby="firearms">
+            <p id="firearms">Firearms</p>
+            <hr>
+            <a href="https://www.nra.org/" aria-label="National Rifle Association">NRA</a>
+            <a href="https://www.guns.com/" aria-label="Guns.com Firearms News">Guns.com</a>
+            <a href="https://www.thetruthaboutguns.com/" aria-label="The Truth About Guns">Truth About Guns</a>
+            <a href="https://www.ar15.com/" aria-label="AR15.com Forums">AR15.com</a>
+            <a href="https://www.gunsmithing.com/" aria-label="American Gunsmithing Institute">AGI</a>
+            <a href="https://www.brownells.com/" aria-label="Brownells Firearms Parts">Brownells</a>
+            <a href="https://www.midwayusa.com/" aria-label="MidwayUSA Firearms Supplies">MidwayUSA</a>
+            <a href="https://gunrights.org/" aria-label="National Association for Gun Rights">NAGR</a>
+            <a href="https://www.gunowners.org/" aria-label="Gun Owners of America">GOA</a>
+            <a href="https://www.civilianmarksmanship.org/" aria-label="Civilian Marksmanship Program">CMP</a>
+            <a href="https://ammoman.com/" aria-label="AmmoMan Ammunition">AmmoMan</a>
+            <a href="https://www.ammoseek.com/" aria-label="AmmoSeek Ammunition Search">AmmoSeek</a>
+            <a href="https://www.spartanmounts.com/" aria-label="Spartan Mounts Firearm Storage">Spartan Mounts</a>
+        </section>
+        <!-- Home Built Aircraft Block -->
+        <section class="block" aria-labelledby="home-built-aircraft">
+            <p id="home-built-aircraft">Home Built Aircraft</p>
+            <hr>
+            <a href="https://www.eaa.org/" aria-label="Experimental Aircraft Association">EAA</a>
+            <a href="https://www.kitplanes.com/" aria-label="Kitplanes Magazine">Kitplanes</a>
+            <a href="https://www.vansaircraft.com/" aria-label="Van's Aircraft Kits">Van’s Aircraft</a>
+            <a href="https://www.zenith.aero/" aria-label="Zenith Aircraft Company">Zenith Aircraft</a>
+            <a href="https://www.rutanaircraft.com/" aria-label="Rutan Aircraft Designs">Rutan Aircraft</a>
+            <a href="https://www.homebuiltairplanes.com/" aria-label="Homebuilt Airplanes Forum">Homebuilt Airplanes</a>
+            <a href="https://www.faa.gov/aircraft/gen_av/kit_aircraft/" aria-label="FAA Kit Aircraft Regulations">FAA Kit Aircraft</a>
+            <a href="https://www.pietenpol.org/" aria-label="Pietenpol Aircraft Plans">Pietenpol</a>
+        </section>
+        <!-- Pole Barns Block -->
+        <section class="block" aria-labelledby="pole-barns">
+            <p id="pole-barns">Pole Barns</p>
+            <hr>
+            <a href="https://www.hansenpolebuildings.com/" aria-label="Hansen Pole Buildings">Hansen Pole Buildings</a>
+            <a href="https://www.dcstructures.com/" aria-label="DC Structures Pole Barn Kits">DC Structures</a>
+            <a href="https://www.yankeebarnhomes.com/" aria-label="Yankee Barn Homes">Yankee Barn Homes</a>
+            <a href="https://www.barndominiumlife.com/" aria-label="Barndominium Life">Barndominium Life</a>
+            <a href="https://www.metalbuildinghomes.org/" aria-label="Metal Building Homes">Metal Building Homes</a>
+            <a href="https://www.buildinggreen.com/" aria-label="BuildingGreen Sustainable Construction">BuildingGreen</a>
+            <a href="https://www.nationwidebarns.com/" aria-label="Nationwide Barns">Nationwide Barns</a>
+            <a href="https://www.postframeadvantage.com/" aria-label="Post-Frame Advantage">Post-Frame Advantage</a>
+        </section>
+        <!-- CB Radios Block -->
+        <section class="block" aria-labelledby="cb-radios">
+            <p id="cb-radios">CB Radios</p>
+            <hr>
+            <a href="https://www.wearecb.com/" aria-label="CB World Radios and Antennas">CB World</a>
+            <a href="https://www.cbworldinformer.com/" aria-label="CB World Informer">CB World Informer</a>
+            <a href="https://www.cobra.com/" aria-label="Cobra Electronics CB Radios">Cobra</a>
+            <a href="https://www.midlandusa.com/" aria-label="Midland CB Radios">Midland</a>
+            <a href="https://www.rightchannelradios.com/" aria-label="Right Channel Radios">Right Channel Radios</a>
+            <a href="https://www.poweroutageready.com/" aria-label="Power Outage Ready CB Guide">Power Outage Ready</a>
+            <a href="https://www.fcc.gov/wireless/bureau-divisions/mobility-division/citizens-band-radio-service-cb" aria-label="FCC Citizens Band Radio Service">FCC CB Service</a>
+            <a href="https://www.dxzone.com/catalog/Radio_Equipment/CB_Radios/" aria-label="DXZone CB Radio Resources">DXZone</a>
+            <a href="https://www.countycomm.com/" aria-label="CountyComm Radios">CountyComm</a>
+            <a href="https://www.radioreference.com/" aria-label="RadioReference Scanner Frequencies">RadioReference</a>
+        </section>
+        <!-- 7.3 Diesel Trucks Block -->
+        <section class="block" aria-labelledby="diesel-trucks">
+            <p id="diesel-trucks">7.3 Diesel Trucks</p>
+            <hr>
+            <a href="https://www.powerstrokenation.com/" aria-label="Power Stroke Nation Forums">Power Stroke Nation</a>
+            <a href="https://www.ford-trucks.com/" aria-label="Ford Trucks Forums">Ford Trucks</a>
+            <a href="https://www.dieselhub.com/" aria-label="Diesel Hub 7.3 Power Stroke">Diesel Hub</a>
+            <a href="https://www.thedieselstop.com/" aria-label="The Diesel Stop">The Diesel Stop</a>
+            <a href="https://www.dieselpowerproducts.com/" aria-label="Diesel Power Products">Diesel Power Products</a>
+            <a href="https://www.powerstroke.org/" aria-label="PowerStroke.org">PowerStroke.org</a>
+            <a href="https://www.sinisterdiesel.com/" aria-label="Sinister Diesel Performance">Sinister Diesel</a>
+            <a href="https://www.ford.com/support/vehicle/parts/service/engines/powerstroke-diesel/" aria-label="Ford Power Stroke Support">Ford Diesel</a>
+            <a href="https://www.riffraffdiesel.com/" aria-label="Riffraff Diesel Performance Parts">Riffraff Diesel</a>
+        </section>
+        <!-- Machining for Home Block -->
+        <section class="block" aria-labelledby="machining-home">
+            <p id="machining-home">Machining for Home</p>
+            <hr>
+            <a href="https://www.practicalmachinist.com/" aria-label="Practical Machinist Forums">Practical Machinist</a>
+            <a href="https://www.cnccookbook.com/" aria-label="CNC Cookbook">CNC Cookbook</a>
+            <a href="https://www.homeshopmachinist.net/" aria-label="Home Shop Machinist">Home Shop Machinist</a>
+            <a href="https://www.mcmaster.com/" aria-label="McMaster-Carr Supplies">McMaster-Carr</a>
+            <a href="https://www.grizzly.com/" aria-label="Grizzly Industrial Tools">Grizzly Industrial</a>
+            <a href="https://www.littlemachineshop.com/" aria-label="Little Machine Shop">Little Machine Shop</a>
+            <a href="https://www.haascnc.com/" aria-label="Haas Automation CNC Machines">Haas Automation</a>
+            <a href="https://www.tormach.com/" aria-label="Tormach CNC Machines">Tormach</a>
+        </section>
+        <!-- Radio Block -->
+        <section class="block" aria-labelledby="radio">
+            <p id="radio">Radio</p>
+            <hr>
+            <a href="http://www.websdr.org/" aria-label="WebSDR Online Receivers">WebSDR</a>
+            <a href="http://www.radiogarden.com/" aria-label="Radio Garden Volgodonsk">Radio Garden</a>
+            <a href="https://www.rtl-sdr.com/" aria-label="About RTL-SDR">RTL-SDR</a>
+            <a href="https://www.mfjenterprises.com/" aria-label="MFJ Enterprises">MFJ Enterprises</a>
+            <a href="https://www.cbtricks.com/radios/rci/rci_2950_2970/index.htm" aria-label="RCI-2950 Service Manual">RCI-2950 Manual</a>
+            <a href="https://www.dxmaps.com/" aria-label="QSO/SWL Real-Time Maps">DX Maps</a>
+            <a href="https://www.repeaterbook.com/repeaters/index.php?state_id=24" aria-label="Maryland Amateur Radio Repeaters">MD Repeaters</a>
+        </section>
+        <!-- Farming Block -->
+        <section class="block" aria-labelledby="farming">
+            <p id="farming">Farming</p>
+            <hr>
+            <a href="https://www.johnnyseeds.com/" aria-label="Johnny's Selected Seeds">Johnny's Seeds</a>
+            <a href="https://www.seedsavers.org/" aria-label="Seed Savers Exchange">Seed Savers</a>
+            <a href="https://www.southernexposure.com/" aria-label="Southern Exposure Seed Exchange">Southern Exposure</a>
+            <a href="https://www.growfood.com/" aria-label="Growfood.com">Growfood</a>
+            <a href="https://www.bootstrapfarmer.com/" aria-label="Bootstrap Farmer">Bootstrap Farmer</a>
+            <a href="https://www.dripworks.com/" aria-label="DripWorks Irrigation">DripWorks</a>
+            <a href="https://www.polyfacefarms.com/" aria-label="Polyface Farms">Polyface</a>
+        </section>
+        <!-- Preps Block -->
+        <section class="block" aria-labelledby="preps">
+            <p id="preps">Preps</p>
+            <hr>
+            <a href="https://www.theprepared.com/" aria-label="The Prepared Survival Guide">The Prepared</a>
+            <a href="https://www.augasonfarms.com/" aria-label="Augason Farms Food Storage">Augason Farms</a>
+            <a href="https://www.trueprepper.com/get-home-bag-ghb-guide-gear-list-checklist/" aria-label="Get Home Bag Guide">Get Home Bag</a>
+            <a href="https://www.northamericanrescue.com/" aria-label="North American Rescue Medical Kits">NAR Medical</a>
+        </section>
+        <!-- Vehicle Maintenance Block -->
+        <section class="block" aria-labelledby="vehicle-maintenance">
+            <p id="vehicle-maintenance">Vehicle Maintenance</p>
+            <hr>
+            <a href="https://www.fordparts.com/" aria-label="Official Ford Parts">Ford Parts</a>
+            <a href="https://www.superdutypsd.com/" aria-label="Super Duty PSD">Super Duty PSD</a>
+            <a href="https://www.dieselbombers.com/" aria-label="Diesel Bombers Forum">Diesel Bombers</a>
+            <a href="https://www.4wheelparts.com/" aria-label="4WheelParts Truck Accessories">4WheelParts</a>
+        </section>
+        <!-- PCBs Block -->
+        <section class="block" aria-labelledby="pcbs">
+            <p id="pcbs">PCBs</p>
+            <hr>
+            <a href="https://www.jlcpcb.com/" aria-label="JLCPCB PCB Fabrication">JLCPCB</a>
+            <a href="https://www.opensource.com/article/17/7/how-we-built-linux-desktop-app-electron" aria-label="Electron Linux Desktop App">Electron App</a>
+        </section>
+        <!-- Power Quality Block -->
+        <section class="block" aria-labelledby="power-quality">
+            <p id="power-quality">Power Quality</p>
+            <hr>
+            <a href="https://www.powerstandards.com/" aria-label="Power Standards Lab">Power Standards</a>
+            <a href="https://www.fluke.com/en-us/products/power-quality-analyzers" aria-label="Fluke Power Quality Analyzers">Fluke PQ</a>
+            <a href="https://www.powerside.com/" aria-label="Powerside PQube 3 Analyzers">Powerside</a>
+        </section>
+        <!-- R&D Block -->
+        <section class="block" aria-labelledby="r-d">
+            <p id="r-d">R&D</p>
+            <hr>
+            <a href="https://www.triz-journal.com/" aria-label="TRIZ Innovation Methodology">TRIZ</a>
+            <a href="https://www.backblaze.com/blog/how-backblaze-developed-a-better-data-center-pdu/" aria-label="Backblaze PDU Development">Backblaze PDU</a>
+            <a href="https://www.boydcorp.com/thermal/heat-sinks/zipper-fin-heat-sinks.html" aria-label="Boyd Zipper Fin Heat Sinks">Zipper Fin Heat Sinks</a>
+        </section>
+        <!-- Remote Control Block -->
+        <section class="block" aria-labelledby="remote-control">
+            <p id="remote-control">Remote Control</p>
+            <hr>
+            <a href="https://www.advancedhmi.com/" aria-label="AdvancedHMI on Raspberry Pi">AdvancedHMI</a>
+            <a href="https://www.proxicast.com/" aria-label="Proxicast Remote Control Routers">Proxicast</a>
+        </section>
+        <!-- Website Block -->
+        <section class="block" aria-labelledby="website">
+            <p id="website">Website</p>
+            <hr>
+            <a href="https://fonts.google.com/specimen/Krona+One" aria-label="Krona One Google Fonts">Krona One</a>
+            <a href="https://www.cloudflare.com/learning/ssl/how-to-install-universal-ssl/" aria-label="CloudFlare Universal SSL">CloudFlare SSL</a>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" aria-label="CSS-Tricks Flexbox Guide">Flexbox Guide</a>
+            <a href="https://formspree.io/" aria-label="Formspree Custom Forms">Formspree</a>
+        </section>
+    </div>
 </body>
-</html> 
+</html>
